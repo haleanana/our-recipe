@@ -51,3 +51,9 @@ html body {
     color: #51808B;
     border-color: #fff;
 }
+
+/*-----------Forms-------------------*/
+
+.input-field {
+    width: 40%
+}
