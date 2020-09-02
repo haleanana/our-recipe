@@ -1,3 +1,15 @@
-body{
-    background: red
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap");
+
+html body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  color: #D66A6A;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    color: red
 }

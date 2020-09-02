@@ -15,7 +15,6 @@ app.config['MONGO_URI'] = os.environ.get('MONGO_URI')
 mongo = PyMongo(app)
 
 @app.route('/')
-@app.route('/home_page')
 def home_page():
 	return render_template("base.html")
 
