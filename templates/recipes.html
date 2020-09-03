@@ -2,8 +2,8 @@
 
 <body>
 	<div class="container">
-    {% for recipe in recipes %}
 		<div class="card-deck">
+        {% for recipe in recipes %}
 			<div class="card">
 				<img src="{{url_for('static',filename ='img/sample.jpg')}}" class="card-img-top" alt="...">
 				<div class="card-body">
@@ -14,8 +14,8 @@
 					<small class="text-muted">Last updated 3 mins ago</small>
 				</div>
 			</div>
+         {% endfor %}
 		</div>
-    {% endfor %}
 	</div>
 </body>
 
