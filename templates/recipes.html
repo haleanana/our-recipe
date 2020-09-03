@@ -5,10 +5,11 @@
 		<div class="card-deck">
         {% for recipe in recipes %}
 			<div class="card">
-				<img src="{{url_for('static',filename ='img/sample.jpg')}}" class="card-img-top" alt="...">
+				<a href="#"><img src="static/img/sample.jpg" class="card-img-top" alt=""...></a>
 				<div class="card-body">
 					<h5 class="card-title">{{recipe.recipe_name}}</h5>
 					<p class="card-text">{{recipe.recipe_description}}</p>
+                    <span class="edit_span"><a href="{{url_for('edit_recipe', recipe_id = recipe._id)}}"><i class="fas fa-edit"></i></a></span>
 				</div>
 				<div class="card-footer">
 					<small class="text-muted">Last updated 3 mins ago</small>

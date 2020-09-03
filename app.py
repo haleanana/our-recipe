@@ -17,7 +17,7 @@ mongo = PyMongo(app)
 @app.route('/')
 def home():
     return render_template("index.html")
-    
+
 @app.route('/get_recipes')
 def get_recipes():
 	return render_template("recipes.html", recipes=mongo.db.recipes.find())
@@ -29,7 +29,17 @@ def add_recipe():
 @app.route('/insert_recipe', methods =['POST'])
 def insert_recipe():
     mongo.db.recipes.insert_one(request.form.to_dict())
+    if 'recipe_image' in request.files:
+        recipe_image = request.file['recipe_image']
+        mongo.save_file(recipe_image.filename, recipe_image)
+        mongo.db.recipes.insert_one({'recipe_image_name':recipe_image})
     return redirect(url_for('get_recipes'))
+
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    my_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('editrecipe.html', recipe= my_recipe, categories = all_categories)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), port=int(
