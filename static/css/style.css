@@ -7,6 +7,14 @@ html body {
   padding: 0;
 }
 
+/*-----------Page heading-------------------*/
+
+h3 {
+    font-family: 'Pacifico', cursive;
+    color: #51808B
+}
+
+
 /*-----------Carousel-------------------*/
 .bg-light{
     background-color: #F7ACA8!important;
