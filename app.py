@@ -40,6 +40,11 @@ def edit_recipe(recipe_id):
     my_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
     return render_template('editrecipe.html', recipe= my_recipe, categories = all_categories)
+@app.route('/show_recipe/<recipe_id>')
+def show_recipe(recipe_id):
+    my_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
+    all_categories = mongo.db.categories.find()
+    return render_template('showrecipe.html', recipe= my_recipe, categories = all_categories)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), port=int(

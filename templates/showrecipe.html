@@ -1,0 +1,87 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3 class="text-center">{{recipe.recipe_name}}</h3>
+<form method="POST" action="">
+  <div class="container">
+    <div class="form-group">
+      <label for="recipe">Recipe Name</label>
+      <input disabled
+        value="{{recipe.recipe_name}}"
+        type="text"
+        class="form-control"
+        id="recipe_name"
+        name="recipe_name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Select Category</label>
+      <select disabled class="form-control" id="category" name="category_name">
+        {% for category in categories %} {% if category.category_name ==
+        recipe.category_name %}
+
+        <option value="{{category.category_name}}" selected
+          >{{category.category_name}}</option
+        >
+        {% else %}
+
+        <option value="{{category.category_name}}"
+          >{{category.category_name}}</option
+        >
+        {% endif %} {% endfor %}
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="recipe_description">Short Description</label>
+      <textarea disabled
+        value="{{recipe.recipe_description}}"
+        class="form-control"
+        id="recipe_description"
+        rows="2"
+        name="recipe_description"
+        maxlength="150"
+      >
+{{recipe.recipe_description}}</textarea
+      >
+    </div>
+    <div class="form-group">
+      <label for="ingredients">Ingredients</label>
+      <textarea disabled
+        class="form-control"
+        id="ingredients"
+        rows="3"
+        name="ingredients"
+      >
+{{recipe.ingredients}}</textarea
+      >
+    </div>
+    <div class="form-group">
+      <label for="methods">Methods</label>
+      <textarea disabled class="form-control" id="methods" rows="5" name="methods">
+{{recipe.methods}}</textarea
+      >
+    </div>
+    <div class="form-group">
+      <label for="prep_time">Prep time</label>
+      <input disabled
+        type="text"
+        class="form-control"
+        id="prep_time"
+        name="prep_time"
+        value="{{recipe.prep_time}}"
+      />
+    </div>
+    <div class="form-group">
+      <label for="cooking_time">Cooking time</label>
+      <input disabled
+        type="text"
+        class="form-control"
+        id="cooking_time"
+        name="cooking_time"
+        value="{{recipe.cooking_time}}"
+      />
+    </div>
+</form>
+{% endblock %}
+
+
+

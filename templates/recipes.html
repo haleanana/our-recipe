@@ -7,7 +7,7 @@
   {% for recipe in recipes %}
   <div class="col mb-4">
       <div class="card h-100">
-        <a href="#"
+        <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}"
           ><img src="static/img/sample.jpg" class="card-img-top" alt="" ...
         /></a>
         <div class="card-body">
