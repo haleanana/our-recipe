@@ -15,8 +15,13 @@ h3 {
     padding-top: 15px
 }
 
+/*-----------Links -------------------*/
+a {
+    color: #51808B
+}
 
-/*-----------Carousel-------------------*/
+
+/*-----------Navbar-------------------*/
 .bg-light{
     background-color: #F7ACA8!important;
 }
@@ -59,6 +64,10 @@ h3 {
     margin-top: 20px;
     color: #51808B;
     border-color: #fff;
+}
+
+.add-btn{
+    justify-content: center
 }
 
 /*-----------Forms-------------------*/
