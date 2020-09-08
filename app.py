@@ -60,10 +60,10 @@ def update_recipe(recipe_id):
     'methods': request.form.get('methods'),
     'prep_time': request.form.get('prep_time'), 
     'cooking_time': request.form.get('cooking_time'),
-    'last_update': now.x.strftime("%d %B %Y")
+    'last_update': now.strftime('%d %B %Y') 
     })
 
-    return redirect(url_for('show_recipe'))
+    return redirect(url_for('get_recipes'))
 
 
 if __name__ == '__main__':
