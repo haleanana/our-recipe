@@ -89,3 +89,13 @@ a:hover{
     overflow: hidden;
     padding: 5px;
 }
+
+/*-----------Show recipe-------------------*/
+
+.recipe-img{
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+
+}
