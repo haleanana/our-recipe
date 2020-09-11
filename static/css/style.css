@@ -82,4 +82,10 @@ a:hover{
     width: 40%
 }
 
-/*-----------Forms-------------------*/
+/*-----------Card-------------------*/
+.card-img, .card-img-top {
+    height:300px;
+    width:100%;
+    overflow: hidden;
+    padding: 5px;
+}

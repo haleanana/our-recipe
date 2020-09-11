@@ -8,7 +8,7 @@
   <div class="col mb-4">
       <div class="card h-100">
         <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}"
-          ><img src="static/img/sample.jpg" class="card-img-top" alt="" ...
+          ><img src="{{recipe.url_image}}" class="card-img-top" alt="" ...
         /></a>
         <div class="card-body">
           <h5 class="card-title">{{recipe.recipe_name}}</h5>

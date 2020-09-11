@@ -38,10 +38,6 @@ def add_recipe():
 @app.route('/insert_recipe', methods =['POST'])
 def insert_recipe():
     mongo.db.recipes.insert_one(request.form.to_dict())
-    if 'recipe_image' in request.files:
-        recipe_image = request.file['recipe_image']
-        mongo.save_file(recipe_image.filename, recipe_image)
-        mongo.db.recipes.insert_one({'recipe_image_name':recipe_image})
     return redirect(url_for('get_recipes'))
 
 @app.route('/edit_recipe/<recipe_id>')
@@ -60,7 +56,9 @@ def update_recipe(recipe_id):
     'methods': request.form.get('methods'),
     'prep_time': request.form.get('prep_time'), 
     'cooking_time': request.form.get('cooking_time'),
-    'last_update': now.strftime('%d %B %Y') 
+    'url_image': request.form.get('url_image'),
+    'last_update': now.strftime('%d %B %Y'),
+
     })
 
     return redirect(url_for('get_recipes'))
