@@ -2,93 +2,49 @@
 
 <h3 class="text-center">{{recipe.recipe_name}}</h3>
 <form method="POST" action="">
-  <div class="container">
-  <img src="{{recipe.url_image}}" alt="Recipe Image" class="recipe-img">
-    <div class="form-group">
-      <label for="recipe">Recipe Name</label>
-      <input disabled
-        value="{{recipe.recipe_name}}"
-        type="text"
-        class="form-control"
-        id="recipe_name"
-        name="recipe_name"
-      />
+	<div class="container">
+		<img src="{{recipe.url_image}}" alt="Recipe Image" class="recipe-img">
+			<div class="form-group">
+				<label for="exampleFormControlSelect1">Category</label>
+            <h4>{{recipe.category_name}}<h4>
+			</div>
+			<div class="form-group">
+				<label for="recipe_description">Description</label>
+				
+            <p>{{recipe.recipe_description}}</p>
+			</div>
+			<div class="form-group">
+				<label for="ingredients">Ingredients</label>
+				<div>
+					<ul>
+						{% for ingredients in recipe.ingredients.splitlines()%}
+						<li>
+							<p>{{ingredients}}</p>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="ingredients">Methods</label>
+				{% for methods in recipe.methods.splitlines() %}
+				<p><i class="fas fa-check"></i> {{methods}}</p>
+				{% endfor %}
+			</div>
+			<div class="form-group">
+				<label for="prep_time">Prep time:</label>
+                <p>{{recipe.prep_time}}</p>
+       
     </div>
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Category</label>
-      <select disabled class="form-control" id="category" name="category_name">
-        {% for category in categories %} {% if category.category_name ==
-        recipe.category_name %}
-
-        <option value="{{category.category_name}}" selected
-          >{{category.category_name}}</option
-        >
-        {% else %}
-
-        <option value="{{category.category_name}}"
-          >{{category.category_name}}</option
-        >
-        {% endif %} {% endfor %}
-      </select>
+				<div class="form-group">
+					<label for="cooking_time">Cooking time: </label>
+					<p>{{recipe.cooking_time}}</p>
     </div>
-    <div class="form-group">
-      <label for="recipe_description">Description</label>
-      <textarea disabled
-        value="{{recipe.recipe_description}}"
-        class="form-control"
-        id="recipe_description"
-        rows="2"
-        name="recipe_description"
-        maxlength="150"
-      >
-{{recipe.recipe_description}}</textarea
-      >
-    </div>
-    <div class="form-group">
-      <label for="ingredients">Ingredients</label>
-      <div>
-      <ul>
-        {% for ingredients in recipe.ingredients.splitlines() %}
-        <li>
-            <p>{{ingredients}}</p>
-        </li>
-        {% endfor %}
-    </ul>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="methods">Methods</label>
-      <textarea disabled class="form-control" id="methods" rows="5" name="methods">
-{{recipe.methods}}</textarea
-      >
-    </div>
-    <div class="form-group">
-      <label for="prep_time">Prep time</label>
-      <input disabled
-        type="text"
-        class="form-control"
-        id="prep_time"
-        name="prep_time"
-        value="{{recipe.prep_time}}"
-      />
-    </div>
-    <div class="form-group">
-      <label for="cooking_time">Cooking time</label>
-      <input disabled
-        type="text"
-        class="form-control"
-        id="cooking_time"
-        name="cooking_time"
-        value="{{recipe.cooking_time}}"
-      />
-    </div>
-     <div class="container">
-    <button type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block">
+					<div class="container">
+						<button type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block">
       Add to Favourites
     </button>
-  </div>
+					</div>
 </form>
 {% endblock %}
-
-
 
