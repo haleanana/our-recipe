@@ -76,6 +76,10 @@ a:hover{
     background-color: #51808B
 }
 
+.edit_span{
+    position: absolute;
+    bottom: 50px;
+}
 /*-----------Forms-------------------*/
 
 .input-field {
@@ -99,3 +103,4 @@ a:hover{
     margin: 0 auto;
 
 }
+
