@@ -19,7 +19,11 @@
           ></span>
         </div>
         <div class="card-footer">
-          <small class="text-muted">Last updated: {{recipe.last_update}}</small>
+        {% if recipe.last_update != "" %} 
+            <small class="text-muted">Last updated: {{recipe.last_update}}</small>
+        {% else %}
+          <p> Not yet updated </p>
+        {% endif %}
         </div>
       </div>
 

@@ -14,6 +14,11 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>{{recipe.recipe_name}}</h5>
         <p>{{recipe.recipe_description}}</p>
+        {% if recipe.last_update == "" %}
+        <p> Not yet updated </p>
+        {% else %}
+        <p>Added / Updated: {{recipe.last_update}}</p>
+        {% endif %}
       </div>
     </div>
 {% endfor %}

@@ -57,6 +57,7 @@ a:hover{
     background-position: center;
     background-size: cover;
     height: 32em;
+    filter: brightness(0.8)
 }
 
 .carousel-caption {
@@ -119,4 +120,13 @@ a:hover{
   .border-black {
     margin:0 5px 0 5px;
   }
+}
+
+/*-----------Footer-------------------*/
+.footer-info{
+    width: 100%;
+    background-color: rgba(228,226,226);
+    position: absolute;
+    bottom: 0;
+    height: 50px
 }
