@@ -4,17 +4,16 @@
 <form method="POST" action="">
 	<div class="container">
 		<img src="{{recipe.url_image}}" alt="Recipe Image" class="recipe-img">
-			<div class="form-group">
-				<label for="exampleFormControlSelect1">Category</label>
-            <h4>{{recipe.category_name}}<h4>
+        <br>
+			<div class="row text-center border-black">
+            <h4 > {{recipe.category_name}} | {{recipe.prep_time}} | {{recipe.cooking_time}} </h4>
 			</div>
-			<div class="form-group">
-				<label for="recipe_description">Description</label>
-				
+            <br>
+			<div class="row text-center border-black">		
             <p>{{recipe.recipe_description}}</p>
 			</div>
-			<div class="form-group">
-				<label for="ingredients">Ingredients</label>
+            <br>
+			<div class="row border-black">
 				<div>
 					<ul>
 						{% for ingredients in recipe.ingredients.splitlines()%}
@@ -25,13 +24,13 @@
 					</ul>
 				</div>
 			</div>
-			<div class="form-group">
-				<label for="ingredients">Methods</label>
+            <br>
+			<div class="row border-black">
 				{% for methods in recipe.methods.splitlines() %}
-				<p><i class="fas fa-check"></i> {{methods}}</p>
+				<p>{{methods}}</p>
 				{% endfor %}
 			</div>
-			<div class="form-group">
+			<!---<div class="form-group">
 				<label for="prep_time">Prep time:</label>
                 <p>{{recipe.prep_time}}</p>
        
@@ -39,7 +38,7 @@
 				<div class="form-group">
 					<label for="cooking_time">Cooking time: </label>
 					<p>{{recipe.cooking_time}}</p>
-    </div>
+    </div>--->
 					<div class="container">
 						<button type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block">
       Add to Favourites

@@ -104,3 +104,10 @@ a:hover{
 
 }
 
+.text-center{
+    justify-content: center;
+}
+
+.border-black {
+    border-bottom: 2px solid rgb(19, 19, 19);
+}
