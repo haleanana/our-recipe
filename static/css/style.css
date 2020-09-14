@@ -57,7 +57,10 @@ a:hover{
     background-position: center;
     background-size: cover;
     height: 32em;
+}
 
+.carousel-caption {
+    background-color: rgba(46, 49, 49, 0.5)
 }
 /*-----------Buttons-------------------*/
 
