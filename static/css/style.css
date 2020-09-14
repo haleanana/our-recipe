@@ -111,3 +111,9 @@ a:hover{
 .border-black {
     border-bottom: 2px solid rgb(19, 19, 19);
 }
+
+@media only screen and (max-width: 600px) {
+  .border-black {
+    margin:0 5px 0 5px;
+  }
+}

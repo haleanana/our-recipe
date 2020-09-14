@@ -1,36 +1,36 @@
 {% extends 'base.html' %} {% block content %}
 
 <h3 class="text-center">{{recipe.recipe_name}}</h3>
-<form method="POST" action="">
+<form method="" action="">
 	<div class="container">
 		<img src="{{recipe.url_image}}" alt="Recipe Image" class="recipe-img">
-        <br>
-			<div class="row text-center border-black">
-            <h4 > {{recipe.category_name}} | {{recipe.prep_time}} | {{recipe.cooking_time}} </h4>
+		<br>
+		<div class="row text-center border-black">
+			<h4> {{recipe.category_name}} | {{recipe.prep_time}} | {{recipe.cooking_time}} </h4>
+		</div>
+		<br>
+		<div class="row text-center border-black">
+			<p>{{recipe.recipe_description}}</p>
+		</div>
+		<br>
+		<div class="row border-black">
+			<div>
+				<ul>
+					{% for ingredients in recipe.ingredients.splitlines()%}
+					<li>
+						<p>{{ingredients}}</p>
+					</li>
+					{% endfor %}
+				</ul>
 			</div>
-            <br>
-			<div class="row text-center border-black">		
-            <p>{{recipe.recipe_description}}</p>
-			</div>
-            <br>
-			<div class="row border-black">
-				<div>
-					<ul>
-						{% for ingredients in recipe.ingredients.splitlines()%}
-						<li>
-							<p>{{ingredients}}</p>
-						</li>
-						{% endfor %}
-					</ul>
-				</div>
-			</div>
-            <br>
-			<div class="row border-black">
-				{% for methods in recipe.methods.splitlines() %}
-				<p>{{methods}}</p>
-				{% endfor %}
-			</div>
-			<!---<div class="form-group">
+		</div>
+		<br>
+		<div class="row border-black">
+			{% for methods in recipe.methods.splitlines() %}
+			<p>{{methods}}</p>
+			{% endfor %}
+		</div>
+		<!---<div class="form-group">
 				<label for="prep_time">Prep time:</label>
                 <p>{{recipe.prep_time}}</p>
        
@@ -39,11 +39,19 @@
 					<label for="cooking_time">Cooking time: </label>
 					<p>{{recipe.cooking_time}}</p>
     </div>--->
-					<div class="container">
-						<button type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<button type="" id="fave-btn" class="btn btn-primary btn-lg btn-block">
       Add to Favourites
     </button>
-					</div>
+				</div>
+				<div class="col">
+					<button id="fave-btn" class="btn btn-primary btn-lg btn-block">
+     <a href="{{url_for('get_recipes')}}"> Back to Recipes</a>
+    </button>
+				</div>
+			</div>
+		</div>
 </form>
 {% endblock %}
-
