@@ -18,7 +18,7 @@ now = datetime.datetime.now()
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return render_template("index.html", recipes=mongo.db.recipes.find())
 
 
 @app.route('/get_recipes')
