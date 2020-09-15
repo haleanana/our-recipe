@@ -63,9 +63,10 @@ def update_recipe(recipe_id):
 
     return redirect(url_for('get_recipes'))
 
-@app.route('/favourites')
-def favourites():
-    return render_template('favourites.html', recipe = mongo.db.recipes.find())
+@app.route('/favourites/<recipe_id>', methods = ['POST'])
+def add_to_favourites(recipe_id):
+    
+    return render_template('favourites.html', recipes = mongo.db.insert_one({'is_fave': 'true'}))
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), port=int(

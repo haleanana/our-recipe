@@ -85,6 +85,11 @@ a:hover{
     position: absolute;
     bottom: 50px;
 }
+
+.row-margin{
+    margin-bottom: 10px;
+}
+
 /*-----------Forms-------------------*/
 
 .input-field {
