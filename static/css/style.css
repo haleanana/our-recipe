@@ -51,6 +51,7 @@ a:hover{
 
 .container-custom{
     margin-top: 10px;
+    height: 100vh;
 }
 
 .carousel-item {
@@ -123,10 +124,9 @@ a:hover{
 }
 
 /*-----------Footer-------------------*/
+
 .footer-info{
     width: 100%;
-    background-color: rgba(228,226,226);
-    position: absolute;
-    bottom: 0;
-    height: 50px
+    background-color: #F7ACA8;
+    height: 80px
 }
