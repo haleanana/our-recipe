@@ -4,7 +4,7 @@
 <h3 class="text-center">Recipes</h3>
 <div class="container">
  <div class="row row-cols-3" id="mobile">
-  {% for recipe in recipes %}
+  {% for results in results %}
   <div class="col mb-4">
       <div class="card h-100">
         <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}"

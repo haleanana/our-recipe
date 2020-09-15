@@ -5,9 +5,9 @@
 <div class="container">
 <div class = "row row-margin">
 <div class="col">
-<form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+<form class="form-inline my-2 my-lg-0" method="POST" action= "{{ url_for('search', recipe_id=query) }}">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="query" name="query">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="search" name="search"><i class="fas fa-search"></i></button>
     </form>
 </div>
 </div>

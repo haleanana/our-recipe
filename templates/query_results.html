@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="recipe-headline">
+    <h2>Search Results</h2>
+</div>
+
+<div class="container">
+    {% for result in result %}
+    <section>
+        <article>
+            <div>
+                <a href="{{url_for('show_recipe', recipe_id=result._id)}}" title="{{result.recipe_name}}"><img
+                        src="{{result.url_image}}" alt="" /></a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-10">
+                <h3><a href="{{url_for('show_recipe', recipe_id=result._id)}}"
+                        title="{{result.recipe_name}}">{{result.recipe_name}}</a></h3>
+                <p>{{result.recipe_description}}</p>
+                <p>{{result.methods}}</p>
+            </div>
+        </article>
+    </section>
+    {% endfor %}
+</div>
+<p>{{ message }}</p>
+
+{% endblock %}

@@ -65,8 +65,18 @@ def update_recipe(recipe_id):
 
 @app.route('/favourites/<recipe_id>', methods = ['POST'])
 def add_to_favourites(recipe_id):
-    
     return render_template('favourites.html', recipes = mongo.db.insert_one({'is_fave': 'true'}))
+
+@app.route('/search', methods = ['POST', 'GET'])
+def search():
+    mongo.db.recipes.create_index([('$**', 'text')])
+    query = request.form.get("query")
+    result = mongo.db.recipes.find({"$text": {"$search": query}}).limit(10)
+    result_num = mongo.db.recipe.find({"$text": {"$search": query}}).count()
+    if result_num > 0:
+        return render_template("query_results.html", result=result, query=query)
+    else:
+        return render_template("query_results.html", result=result, query=query, message="No results found. Please try again")
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), port=int(
