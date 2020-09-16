@@ -6,22 +6,18 @@
     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner">
   {% for recipe in recipes %}
     <div class="carousel-item {% if loop.index == 1 %} active {%endif %}" id="slide{{loop.index}}">
-      <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}"><img src="{{recipe.url_image}}" class="d-block w-100" alt="..."></a>
+      <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}"><img src="{{recipe.url_image}}" class="d-block w-100" alt="{{recipe.recipe_name}} Image"></a>
       <div class="carousel-caption d-none d-md-block">
         <h5>{{recipe.recipe_name}}</h5>
         <p>{{recipe.recipe_description}}</p>
-        {% if recipe.last_update == "" %}
-        <p> Not yet updated </p>
-        {% else %}
-        <p>Added / Updated: {{recipe.last_update}}</p>
-        {% endif %}
       </div>
     </div>
-{% endfor %}
+    {% endfor %}
   </div>
   <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
