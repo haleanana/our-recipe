@@ -72,11 +72,13 @@ def search():
     mongo.db.recipes.create_index([('$**', 'text')])
     query = request.form.get("query")
     result = mongo.db.recipes.find({"$text": {"$search": query}}).limit(10)
-    result_num = mongo.db.recipe.find({"$text": {"$search": query}}).count()
-    if result_num > 0:
-        return render_template("query_results.html", result=result, query=query)
+    result_count = mongo.db.recipes.find({"$text": {"$search": query}}).count()
+
+    if result_count == 0:
+       return render_template("no_results.html", result=result, query=query, message = "No results found. Please try again")
+
     else:
-        return render_template("query_results.html", result=result, query=query, message="No results found. Please try again")
+        return render_template( "query_results.html", result=result, query=query )
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), port=int(

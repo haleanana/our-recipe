@@ -135,3 +135,16 @@ a:hover{
     background-color: #F7ACA8;
     height: 80px
 }
+
+/*-----------Search results-------------------*/
+
+.result-image{
+    object-fit: cover;
+    width: 100%;
+    height: 100px;
+
+}
+
+.results-border{
+    border: 1px solid black;
+}
