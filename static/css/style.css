@@ -18,11 +18,28 @@ h3 {
 
 .home-image{
     height: 600px;
+    width: 100%;
 }
 
 .home-padding{
     margin-top: 30px;
 }
+
+.home-text{
+    position: absolute;
+    right: 30px;
+    bottom: 400px;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .home-image {
+    height: 400px;
+    width: inherit;
+  }
+}
+
+
 
 /*-----------Links -------------------*/
 a {
