@@ -13,7 +13,7 @@
     <div class="carousel-item {% if loop.index == 1 %} active {%endif %}" id="slide{{loop.index}}">
       <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}"><img src="{{recipe.url_image}}" class="d-block w-100" alt="{{recipe.recipe_name}} Image"></a>
       <div class="carousel-caption d-none d-md-block">
-        <h5>{{recipe.recipe_name}}</h5>
+        <h4 class="text-upper">{{recipe.recipe_name}}</h4>
         <p>{{recipe.recipe_description}}</p>
       </div>
     </div>

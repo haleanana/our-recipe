@@ -10,7 +10,6 @@ html body {
 /*-----------Page heading-------------------*/
 
 h3 {
-    font-family: 'Pacifico', cursive;
     color: #51808b;
     padding-top: 15px
 }
@@ -58,24 +57,31 @@ a:hover{
     background-position: center;
     background-size: cover;
     height: 32em;
-    filter: brightness(0.8)
 }
 
 .carousel-caption {
-    background-color: rgba(46, 49, 49, 0.5)
+    background-color:  #51808B
 }
 
 .carousel-item {
     padding: 10px;
-    border: 1px solid black
+    border: 1px solid #E8E8E8
+}
+
+.w-100 {
+    height: 99%
+}
+
+.text-upper{
+    text-transform: uppercase;
 }
 /*-----------Buttons-------------------*/
 
 .btn-primary{
-    background-color: #F7ACA8;
+    background-color: #fff;
     margin-top: 20px;
     color: #51808B;
-    border-color: #fff;
+    border: 1px solid #E8E8E8
 }
 
 .add-btn{
@@ -116,9 +122,16 @@ a:hover{
     width: 300px;
     display: block;
     margin: 0 auto;
-
+    padding: 5px ;
 }
 
+.img-div{
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #E8E8E8;
+}
 .text-center{
     justify-content: center;
 }
