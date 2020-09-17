@@ -28,24 +28,24 @@ a:hover{
 
 
 /*-----------Navbar-------------------*/
-.bg-light{
-    background-color: #F7ACA8!important;
-}
 
 .navbar-nav{
     color: #51808b;
-    font-family: 'Pacifico', cursive;
     font-size: 26px;
 }
 
 .navbar-light .navbar-brand {
-    font-family: 'Pacifico', cursive;
     font-size: 30px;
     color: #51808b;
 }
 
 .navbar-light .navbar-nav .nav-link {
     color: #51808b;
+}
+
+.nav-border{
+    margin: 0 50px 0 50px;
+    border-bottom: double; 
 }
 /*-----------Carousel-------------------*/
 
@@ -63,6 +63,11 @@ a:hover{
 
 .carousel-caption {
     background-color: rgba(46, 49, 49, 0.5)
+}
+
+.carousel-item {
+    padding: 10px;
+    border: 1px solid black
 }
 /*-----------Buttons-------------------*/
 
