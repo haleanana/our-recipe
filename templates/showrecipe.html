@@ -1,59 +1,50 @@
 {% extends 'base.html' %} {% block content %}
+
 <h3 class="text-center">{{recipe.recipe_name}}</h3>
-<form method="POST" action = "recipe()">
-	<div class="container">
-    <div class="row img-div">
-		<img src="{{recipe.url_image}}" alt="Recipe Image" class="recipe-img">
+<div class="container container-margin">
+  <div class="row img-div">
+    <img src="{{recipe.url_image}}" alt="Recipe Image" class="recipe-img" />
+  </div>
+  <br />
+  <div class="row text-center border-black">
+    <h4>
+      {{recipe.category_name}} | <small class="text-muted">PREP:</small> {{recipe.prep_time}} | <small class="text-muted">COOK:</small> {{recipe.cooking_time}}
+    </h4>
+  </div>
+  <br />
+  <div class="row text-center border-black">
+    <p>{{recipe.recipe_description}}</p>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col">
+      <button type="" id="fave-btn" class="btn btn-primary btn-lg btn-block">
+        Add to Favourites
+      </button>
     </div>
-		<br>
-		<div class="row text-center border-black">
-			<h4> {{recipe.category_name}} | {{recipe.prep_time}} | {{recipe.cooking_time}} </h4>
-		</div>
-		<br>
-		<div class="row text-center border-black">
-			<p>{{recipe.recipe_description}}</p>
-		</div>
-		<br>
-		<div class="row border-black">
-			<div>
-				<ul>
-					{% for ingredients in recipe.ingredients.splitlines()%}
-					<li>
-						<p>{{ingredients}}</p>
-					</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</div>
-		<br>
-		<div class="row border-black">
-			{% for methods in recipe.methods.splitlines() %}
-			<p>{{methods}}</p>
-			{% endfor %}
-		</div>
-		<!---<div class="form-group">
-				<label for="prep_time">Prep time:</label>
-                <p>{{recipe.prep_time}}</p>
-       
+    <div class="col">
+      <button id="fave-btn" class="btn btn-primary btn-lg btn-block">
+        <a href="{{url_for('get_recipes')}}"> Back to Recipes</a>
+      </button>
     </div>
-				<div class="form-group">
-					<label for="cooking_time">Cooking time: </label>
-					<p>{{recipe.cooking_time}}</p>
-    </div>--->
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<button type="" id="fave-btn" class="btn btn-primary btn-lg btn-block">
-      Add to Favourites
-    </button>
-				</div>
-				<div class="col">
-					<button id="fave-btn" class="btn btn-primary btn-lg btn-block">
-     <a href="{{url_for('get_recipes')}}"> Back to Recipes</a>
-    </button>
-				</div>
-			</div>
-		</div>
-	</div>
-</form>
+  </div>
+  <br />
+  <div class="row border-black">
+    <div class="col-4 show-recipe-background" id="showRecipeMobile">
+      <ul>
+        {% for ingredients in recipe.ingredients.splitlines()%}
+        <li>
+          <p>{{ingredients}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <br id="br-on-mobile" />
+    <div class="col-8" id="showRecipeMobile2">
+      {% for methods in recipe.methods.splitlines() %}
+      <p>{{methods}}</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
 {% endblock %}

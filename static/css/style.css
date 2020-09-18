@@ -144,6 +144,9 @@ a:hover{
 
 /*-----------Show recipe-------------------*/
 
+.container-margin {
+    margin-bottom: 50px;
+}
 .recipe-img{
     height: 300px;
     width: 300px;
@@ -167,9 +170,22 @@ a:hover{
     border-bottom: 2px solid rgb(19, 19, 19);
 }
 
+.show-recipe-background {
+    background: lightgrey;
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+#br-on-mobile {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .border-black {
     margin:0 5px 0 5px;
+  }
+  #br-on-mobile{
+      display: flex
   }
 }
 
