@@ -36,6 +36,10 @@ h3 {
 
 }
 
+.headline-mob-view{
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
   .home-image {
     height: 400px;
@@ -46,6 +50,17 @@ h3 {
       display: unset;
       width: 100%
   }
+
+    .headline-mob-view{
+        display: unset;
+    }
+
+    .mob-view-row {
+        margin: 0 auto;
+        position: absolute;
+        bottom: 10px;
+    }
+
 }
 
 
@@ -80,6 +95,7 @@ a:hover{
 .nav-border{
     margin: 0 50px 0 50px;
     border-bottom: double; 
+    padding-top: 10px;
 }
 /*-----------Carousel-------------------*/
 
