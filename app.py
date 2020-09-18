@@ -65,7 +65,14 @@ def update_recipe(recipe_id):
 
 @app.route('/favourites/<recipe_id>', methods = ['POST'])
 def add_to_favourites(recipe_id):
-    return render_template('favourites.html', recipes = mongo.db.insert_one({'is_fave': 'true'}))
+    mongo.db.recipes.update({'_id': ObjectId(recipe_id)},
+    {'$set' : {'fave': 'Yes'}
+    })
+    return render_template('favourites.html', recipes = mongo.db.recipes.find())
+
+@app.route('/show_favourites')
+def show_favourites():
+    return render_template('favourites.html', recipes = mongo.db.recipes.find())
 
 @app.route('/search', methods = ['POST', 'GET'])
 def search():

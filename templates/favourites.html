@@ -1,11 +1,12 @@
 {% extends 'base.html' %} {% block content %}
 
 <body>
-<h3 class="text-center">Recipes</h3>
+<h3 class="text-center">Favourites</h3>
 <div class="container">
  <div class="row row-cols-3" id="mobile">
-  {% for results in results %}
-  <div class="col mb-4">
+  {% for recipe in recipes %}
+  {% if recipe.fave == 'Yes' %}
+      <div class="col mb-4">
       <div class="card h-100">
         <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}"
           ><img src="{{recipe.url_image}}" class="card-img-top" alt="" ...
@@ -26,8 +27,8 @@
         {% endif %}
         </div>
       </div>
-
     </div>
+    {% endif %}
     {% endfor %}
   </div>
 </div>

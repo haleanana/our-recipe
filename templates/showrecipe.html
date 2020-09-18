@@ -18,9 +18,11 @@
   <br />
   <div class="row">
     <div class="col">
-      <button type="" id="fave-btn" class="btn btn-primary btn-lg btn-block">
+    <form method="POST" action="{{url_for('add_to_favourites', recipe_id = recipe._id)}}">
+      <button type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block">
         Add to Favourites
       </button>
+    </form>
     </div>
     <div class="col">
       <button id="fave-btn" class="btn btn-primary btn-lg btn-block">
