@@ -37,7 +37,10 @@ def add_recipe():
 
 @app.route('/insert_recipe', methods =['POST'])
 def insert_recipe():
-    mongo.db.recipes.insert_one(request.form.to_dict())
+    dict1= request.form.to_dict()
+    added_on = now.strftime('%d %B %Y')
+    dict1['added_on'] = added_on
+    mongo.db.recipes.insert_one(dict1)
     return redirect(url_for('get_recipes'))
 
 @app.route('/edit_recipe/<recipe_id>')
