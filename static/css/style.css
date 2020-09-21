@@ -110,7 +110,7 @@ a {
 
 a:hover{
     text-decoration: none;
-    color: #fff;
+    color: black;
     border-color: none;
 }
 
@@ -266,6 +266,7 @@ a:hover{
     object-fit: cover;
     width: 100%;
     height: 100px;
+    padding: 2px 0 2px 0;
 
 }
 

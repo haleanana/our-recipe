@@ -1,20 +1,25 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="text-center search-margin">
-    <h2>Search Results</h2>
+    <h3>Search Results</h3>
 </div>
 <div class="container container-custom">
     {% for result in result %}
+    <a href="{{url_for('show_recipe', recipe_id = result._id)}}">
 	<div class="container">
 		<div class="row results-border">
 			<div class="col-sm">
 			<img class = "result-image"src ='{{result.url_image}}'>
 			</div>
-			<div class="col-sm">
+			<div class="col-sm text-center">
+            <p>
 				{{result.recipe_name}}
+            </p>
 			</div>
-			<div class="col-sm">
+			<div class="col-sm text-center">
+            <p>
                 {{result.recipe_description}}
+            </p>
 			</div>
 		</div>
 	</div>
