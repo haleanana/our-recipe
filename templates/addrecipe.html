@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <h3 class="text-center">Add Recipe</h3>
-<form method="POST" action="{{url_for('insert_recipe')}}">
+<form method="POST" action="{{url_for('insert_recipe')}}" id="contact_form">
   <div class="container">
     <div class="form-group">
       <label for="recipe">Recipe Name</label>
@@ -10,6 +10,7 @@
         id="recipe_name"
         name="recipe_name"
       />
+      <div class="invalid-feedback">No, you missed this one.</div>
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">Select Category</label>
