@@ -27,6 +27,7 @@ h3 {
 
 .home-padding{
     margin-top: 30px;
+    justify-content: center;
 }
 
 .home-text{
@@ -36,8 +37,17 @@ h3 {
 
 }
 
+.jumbotron {
+    height: 339px;
+}
+
 .headline-mob-view{
     display: none;
+}
+
+.container-jumbotron{
+    position: absolute;
+    top: 400px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -59,8 +69,37 @@ h3 {
         margin: 0 auto;
         position: absolute;
         bottom: 10px;
+        left: 5px;
     }
 
+}
+
+.display-4::before{
+    content: '';
+    animation: animate infinite 8s;  
+
+}
+
+@keyframes animate{
+    0%{
+        content: 'Hello';
+    }
+    20%{
+        content: 'Hola';
+    }
+    40%{
+        content: 'Hallo';
+    }
+    60%{
+        content: 'Bonjour';
+    }
+    80%{
+        content: 'Ni Hao';
+    }
+    100%{
+        content: 'Privet';
+    }
+    
 }
 
 
@@ -195,7 +234,7 @@ a:hover{
 }
 
 .show-recipe-background {
-    background: lightgrey;
+    background: rgba(0,0,0,.07);
     font-size: 12px;
     padding-top: 20px;
 }
