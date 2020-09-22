@@ -1,6 +1,6 @@
 import os
 import datetime
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, abort
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -18,6 +18,7 @@ now = datetime.datetime.now()
 
 @app.route('/')
 def home():
+    abort(404)
     return render_template("index.html", recipes=mongo.db.recipes.find())
 
 
