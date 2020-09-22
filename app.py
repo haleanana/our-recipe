@@ -90,6 +90,15 @@ def search():
     else:
         return render_template( "query_results.html", result=result, query=query )
 
+
+@ app.errorhandler(404)
+def page_not_found(error):
+    return render_template('errors/404.html')
+
+@ app.errorhandler(500)
+def internal_server(error):
+    return render_template('errors/500.html')
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), port=int(
         os.environ.get('PORT')),
