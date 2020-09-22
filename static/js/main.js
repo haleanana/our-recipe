@@ -7,7 +7,3 @@ $(window).on('resize load', function() {
     $("#showRecipeMobile2").removeClass('col-8')
   }
 });
-//Form Validator
-$(document).ready(function(){
- $('#contact_form').validate()
-})
