@@ -23,7 +23,7 @@ def home():
 
 @app.route('/get_recipes')
 def get_recipes():
-	return render_template("recipes.html", recipes=mongo.db.recipes.find())
+	return render_template("recipes.html", recipes=mongo.db.recipes.find().sort('added_on', -1))
 
 @app.route('/show_recipe/<recipe_id>')
 def show_recipe(recipe_id):
