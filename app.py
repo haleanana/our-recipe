@@ -22,9 +22,15 @@ def home():
     #abort(500)#
     return render_template("index.html", recipes=mongo.db.recipes.find())
 
-@app.route('/get_recipes')
-def get_recipes():
-	return render_template("recipes.html",  now = now.strftime('%d %B %Y'), recipes=mongo.db.recipes.find().sort('added_on', -1))
+@app.route('/recipes')
+def recipes():
+    query = request.args.get("query")
+    if not query:
+        recipes=mongo.db.recipes.find().sort('added_on', -1)
+    else:
+        mongo.db.recipes.create_index([('$**', 'text')])
+        recipes = mongo.db.recipes.find({"$text":{"$search": query}}).limit(10)
+    return render_template("recipes.html",  now = now.strftime('%d %B %Y'), recipes=recipes)
 
 @app.route('/show_recipe/<recipe_id>')
 def show_recipe(recipe_id):
@@ -42,7 +48,7 @@ def insert_recipe():
     added_on = now.strftime('%d %B %Y')
     recipe['added_on'] = added_on
     mongo.db.recipes.insert_one(recipe)
-    return redirect(url_for('get_recipes'))
+    return redirect(url_for('recipes'))
 
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
@@ -65,7 +71,7 @@ def update_recipe(recipe_id):
 
     })
 
-    return redirect(url_for('get_recipes'))
+    return redirect(url_for('recipes'))
 
 @app.route('/favourites/<recipe_id>', methods = ['POST'])
 def add_to_favourites(recipe_id):
@@ -77,20 +83,6 @@ def add_to_favourites(recipe_id):
 @app.route('/show_favourites')
 def show_favourites():
     return render_template('favourites.html', recipes = mongo.db.recipes.find())
-
-@app.route('/search', methods = ['POST', 'GET'])
-def search():
-    mongo.db.recipes.create_index([('$**', 'text')])
-    query = request.form.get("query")
-    result = mongo.db.recipes.find({"$text": {"$search": query}}).limit(10)
-    result_count = mongo.db.recipes.find({"$text": {"$search": query}}).count()
-
-    if result_count == 0:
-       return render_template("no_results.html", result=result, query=query, message = "No results found. Please try again")
-
-    else:
-        return render_template( "query_results.html", result=result, query=query )
-
 
 @ app.errorhandler(404)
 def page_not_found(error):
