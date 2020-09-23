@@ -18,6 +18,8 @@ now = datetime.datetime.now()
 
 @app.route('/')
 def home():
+    #abort(404)#
+    #abort(500)#
     return render_template("index.html", recipes=mongo.db.recipes.find())
 
 @app.route('/get_recipes')

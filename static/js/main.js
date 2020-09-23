@@ -1,4 +1,6 @@
-//removes classes to make it responsive on mobile view
+/*removes classes to make it responsive on mobile view
+This was done as it was not possible for me to use CSS 
+to do this*/
 $(window).on('resize load', function() {
   if ($(window).width() <= 768) { 
     $("#mobile").removeClass("row");
