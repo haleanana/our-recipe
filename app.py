@@ -20,10 +20,9 @@ now = datetime.datetime.now()
 def home():
     return render_template("index.html", recipes=mongo.db.recipes.find())
 
-
 @app.route('/get_recipes')
 def get_recipes():
-	return render_template("recipes.html", recipes=mongo.db.recipes.find().sort('added_on', -1))
+	return render_template("recipes.html",  now = now.strftime('%d %B %Y'), recipes=mongo.db.recipes.find().sort('added_on', -1))
 
 @app.route('/show_recipe/<recipe_id>')
 def show_recipe(recipe_id):
