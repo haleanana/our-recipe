@@ -19,11 +19,9 @@
   <div class="row">
     <div class="col">
     {% if recipe.fave %}
-    <form method="POST" action="{{url_for('add_to_favourites', recipe_id = recipe._id)}}">
-      <button type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block" disabled>
+      <button class="btn btn-primary button-disabled btn-lg btn-block">
         Already in Favourites
       </button>
-    </form>
     {% else %}
     <form method="POST" action="{{url_for('add_to_favourites', recipe_id = recipe._id)}}">
       <button type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block">
