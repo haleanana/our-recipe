@@ -21,3 +21,7 @@ Purposefully done to be clean and simple; users can navigate very easily so they
 
 [**Credits**](#credits)
 
+## Demo
+
+### Goals
+

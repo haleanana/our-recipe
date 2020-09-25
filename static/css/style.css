@@ -271,22 +271,6 @@ a:hover{
 
 /*-----------Search results-------------------*/
 
-.result-image{
-    object-fit: cover;
-    width: 100%;
-    height: 100px;
-    padding-top: 10px;
-
-}
-
-.results-border{
-    border: 1px solid black;
-}
-
-.img-results {
-    width: 100%
-}
-
-.search-margin{
-    margin-top: 10px
+.no-result {
+    padding-left: 20px
 }

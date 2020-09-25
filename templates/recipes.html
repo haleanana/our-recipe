@@ -1,11 +1,11 @@
 {% extends 'base.html' %} {% block content %}
-
+<!---Recipe page where all available recipes are found-->
 <body>
   <h3 class="text-center">Recipes</h3>
   <div class="container">
     <div class="row row-margin">
       <div class="col">
-      <!---Search Button--->
+        <!---Search Button--->
         <form
           class="form-inline my-2 my-lg-0"
           method="GET"
@@ -26,41 +26,43 @@
       </div>
     </div>
     <div class="row row-cols-3" id="mobile">
-    {% if recipes.count() %}
-        {% for recipe in recipes %}
-        <!---For loop used to display recipe from database --->
-        <div class="col mb-4">
-            <div class="card h-100">
-            {% if recipe.added_on == now %}
-                    <h4 class="new-badge">New!</h4>
-                {% endif %}
-            <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}">
-                <img src="{{recipe.url_image}}" class="card-img-top" alt="{{recipe.recipe_name}}" />
-            </a>
-            <div class="card-body">
-                <h5 class="card-title">{{recipe.recipe_name}}</h5>
-                <p class="card-text">{{recipe.recipe_description}}</p>
-                <span class="edit_span"
-                ><a href="{{url_for('edit_recipe', recipe_id = recipe._id)}}"
-                    ><i class="fas fa-edit"></i><small class="text-muted">EDIT</small></a
-                ></span
-                >
-            </div>
-            <div class="card-footer">
-            <!---If statement to check if info should
-            display Last Updated or Added on --->
-                {% if recipe.added_on %}
-                <small class="text-muted">Added on: {{recipe.added_on}}</small>
-                {% else %}
-                <small class="text-muted">Last Updated: {{recipe.last_update}}</small>
-                {% endif %}
-            </div>
-            </div>
+      {% if recipes.count() %} {% for recipe in recipes %}
+      <!---For loop used to display recipe from database --->
+      <div class="col mb-4">
+        <div class="card h-100">
+          {% if recipe.added_on == now %}
+          <h4 class="new-badge">New!</h4>
+          {% endif %}
+          <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}">
+            <img
+              src="{{recipe.url_image}}"
+              class="card-img-top"
+              alt="{{recipe.recipe_name}}"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">{{recipe.recipe_name}}</h5>
+            <p class="card-text">{{recipe.recipe_description}}</p>
+            <span class="edit_span">
+              {% if recipe.added_on %}
+              <small class="text-muted">Added on: {{recipe.added_on}}</small>
+              {% else %}
+              <small class="text-muted"
+                >Last Updated: {{recipe.last_update}}</small
+              >
+              {% endif %}
+						<a href="{{url_for('edit_recipe', recipe_id = recipe._id)}}"><i class="fas fa-edit">
+						</i><small class="text-muted">Edit</small></a>
+            </span>
+          </div>
+          <div class="card-footer text-center">
+					<a href="{{url_for('show_recipe', recipe_id = recipe._id)}}">View recipe</a>
+          </div>
         </div>
-        {% endfor %}
-    {% else %}
-        <p>No recipes found</p>
-    {% endif %}
+      </div>
+      {% endfor %} {% else %}
+      <p class="no-result">No recipes found. Please try again.</p>
+      {% endif %}
     </div>
   </div>
 </body>
