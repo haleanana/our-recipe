@@ -311,6 +311,22 @@ a:hover{
 
 }
 
+.link-footer{
+    color: black;
+
+}
+
+.link-footer:hover{
+    color: #51808b
+}
+.ftr-btn{
+      margin-top: 10px;
+  }
+
+.row-height{
+    height: 20px;
+}
+
 @media only screen and (max-width: 600px) {
   .ftr-btn{
       margin-top: 10px;

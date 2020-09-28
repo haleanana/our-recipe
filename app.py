@@ -1,6 +1,6 @@
 import os
 import datetime
-from flask import Flask, render_template, redirect, request, url_for, abort
+from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -12,6 +12,7 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get('MONGO_DB')
 app.config['MONGO_URI'] = os.environ.get('MONGO_URI')
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 mongo = PyMongo(app)
 now = datetime.datetime.now()
@@ -83,6 +84,13 @@ def add_to_favourites(recipe_id):
 @app.route('/show_favourites')
 def show_favourites():
     return render_template('favourites.html', recipes = mongo.db.recipes.find())
+
+@app.route('/sub', methods = ['POST'])
+def sub():
+    sub = request.form.to_dict()
+    mongo.db.subscribers.insert(sub)
+    flash("Thank you for subscribing.", "info")
+    return redirect(request.referrer)
 
 @ app.errorhandler(404)
 def page_not_found(error):
