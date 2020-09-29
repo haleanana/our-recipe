@@ -11,6 +11,7 @@
         id="recipe_name"
         name="recipe_name"
         required
+        placeholder="Recipe name"
       />
       <div class="invalid-feedback">No, you missed this one.</div>
     </div>
@@ -33,6 +34,7 @@
         name="recipe_description"
         maxlength="150"
         required
+        placeholder="150 characters max"
       ></textarea>
     </div>
     <div class="form-group">
@@ -42,17 +44,17 @@
         id="ingredients"
         rows="3"
         name="ingredients"
+        placeholder="Please list each ingredient in it's own line."
         required
       ></textarea>
     </div>
     <div class="form-group">
       <label for="methods">Methods</label>
-      <textarea class="form-control" id="methods" rows="5" name="methods" required>
-      </textarea>
+      <textarea class="form-control" id="methods" rows="5" name="methods" placeholder="Please number each step and write it on it's own line."required></textarea>
     </div>
     <div class="form-group">
       <label for="recipe">Prep time</label>
-      <input type="text" class="form-control" id="prep_time" name="prep_time" required/>
+      <input type="text" class="form-control" id="prep_time" name="prep_time" placeholder="Please write in minutes. Eg. 120 mins" required/>
     </div>
     <div class="form-group">
       <label for="recipe">Cooking time</label>
@@ -61,6 +63,7 @@
         class="form-control"
         id="cooking_time"
         name="cooking_time"
+        placeholder="Please write in minutes. Eg. 120 mins"
         required
       />
     </div>
@@ -71,6 +74,7 @@
         class="form-control"
         id="url_image"
         name="url_image"
+        placeholder="Please provide a valid URL. Eg. Imgur, Google Drive and etc."
         required
       />
     </div>
