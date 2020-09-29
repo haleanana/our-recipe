@@ -23,6 +23,9 @@ Purposefully done to be clean and simple; users can navigate very easily so they
 
 ## Demo
 
+![demo](https://imgur.com/q0jqf4I)
+
+[**back to top**](#table-of-contents)
 ## UX
 
 ### Goals
@@ -50,17 +53,18 @@ How this website meets their needs:
 
 ### Goals as a developer
 - Expand my portfolio.
-- Practice my Python & Database skills as well as refresh my HTML,CSS and JS skills.
+- Practice my Python ,Database and Framework skills as well as refresh my HTML,CSS and JS skills.
 - A communal online cookbook with a collection of unique and user submitted recipes.
 - Increase users which will also grow the number of recipes available.
 
 ### User stores
 
-As someone who loves to cook, what I would want in a recipe website:
+As a user, what I would want in a recipe website:
 1. Direct and easy way to get to the recipe I want.
 2. A number of recipes to choose from.
 3. Submit and contribute my own recipes.
 4. For recipes to have that "home-made" feel.
+5. Access the website from any device.
 
 ### Design choices
 
@@ -75,6 +79,32 @@ so it caters to all users regardless of gender.
 - I'm using Poppins as my main font as this presents a much simpler and cleaner feel which is one of my design goals.
 
 **Ease of use**
-- The 
+- Navbar is fixed at the top so users will always have access to the main/important pages.
+
+**Recipes Page**
+- Initial design was to display the available recipes (name and cooking time) in a collapsible accordion. The design was updated to cards as
+the collapsible accordion simply did not allow me to provide enough information for the users browsing through the recipes page.
+- Cards are nows used to display the available recipes as this allows me to display a lot more information to the user such as images, short description, prep time and etc.
+- Cards also provide a cleaner and less cluttered look which reflects the "clean" look goal.
+- Search bar added so users can quickly search recipes.
+
+**Footer**
+- Footer was added to the final design. The footer section allows me to put navlinks at the bottom of the page which will increase ease of use for users.
+
+### Wireframes
+
+Figma was used to create my mock ups.
+
+**Mock up Home**
+<img src = "static/img/mockup/mockuphome.png">
+**Mock up view recipe page**
+<img src = "static/img/mockup/mockuprecipe.png">
+**Mock up add recipe page**
+<img src = "static/img/mockup/mockupaddrecipe.png">
+
+
+[**back to top**](#table-of-contents)
+
+## Features
 
 
