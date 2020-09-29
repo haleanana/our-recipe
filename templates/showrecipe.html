@@ -20,7 +20,7 @@
     <div class="col">
     {% if recipe.fave %}
       <button class="btn btn-primary button-disabled btn-lg btn-block">
-        Already in Favourites
+        Favourited
       </button>
     {% else %}
     <form method="POST" action="{{url_for('add_to_favourites', recipe_id = recipe._id)}}">

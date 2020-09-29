@@ -23,5 +23,58 @@ Purposefully done to be clean and simple; users can navigate very easily so they
 
 ## Demo
 
+## UX
+
 ### Goals
+
+The goal of this website is to create a user submitted library of recipes that is unique and with a "non-commercial" feel. Clean and simple, users should feel like they are cooking 
+recipes from their grandparents, parents, friends and people close to them. 
+
+### Target audience goals
+
+This website is catered for people who loves to cook recipes with a "local" feel regardless of age and gender.
+
+User needs:
+- Selection of unique, non-commercial and user submitted recipes.
+- Be able to share their own recipe.
+- Simple and clean design.
+- Free from ads, blogs and other "clutter".
+- Easy to navigate in any device.
+
+How this website meets their needs:
+- Users are able to submit their own recipe.
+- Growing collection of user submitted recipes to choose from.
+- Design is simple and clean but still visually appealing.
+- No blogs , unneccessary clutter or ads.
+- The design such as a fixed Navbar makes its very easy to navigate around.
+
+### Goals as a developer
+- Expand my portfolio.
+- Practice my Python & Database skills as well as refresh my HTML,CSS and JS skills.
+- A communal online cookbook with a collection of unique and user submitted recipes.
+- Increase users which will also grow the number of recipes available.
+
+### User stores
+
+As someone who loves to cook, what I would want in a recipe website:
+1. Direct and easy way to get to the recipe I want.
+2. A number of recipes to choose from.
+3. Submit and contribute my own recipes.
+4. For recipes to have that "home-made" feel.
+
+### Design choices
+
+**Colour scheme**
+- The initial colour design (refer to [**Wireframe**](#wireframes)) leaned towards a feminine feel so the colours were changed.
+- The primary colours for this website are #fff , #51808B and different shades of grey. The colours are chosen because they are gender neutral 
+so it caters to all users regardless of gender.
+- The colour combination also presents a clean and simple looking website because the colours are not too "strong".
+
+**Fonts**
+- Intially, I used Pacifico:cursive for the header fonts. I decided to change the fonts as this was not reflective of my design goals.
+- I'm using Poppins as my main font as this presents a much simpler and cleaner feel which is one of my design goals.
+
+**Ease of use**
+- The 
+
 
