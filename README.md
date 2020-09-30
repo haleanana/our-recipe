@@ -23,7 +23,7 @@ Purposefully done to be clean and simple; users can navigate very easily so they
 
 ## Demo
 
-<img src = "static/img/mockup/demo.gif">
+<img width = "100%" src = "static/img/mockup/demo.gif">
 
 [**back to top**](#table-of-contents)
 ## UX
@@ -131,18 +131,18 @@ Figma was used to create my mock ups.
 
 ## Features to add
 
-- [] User registry and login.
-- [] Users are only able to update and delete recipes if it was submitted by them.
-- [] The option to filter recipes by category, cooktime, preptime and etc.
-- [] Pagination for when the library grows.
-- [] Weekly automated emails for subsribers.
-- [] Ability to rate the recipes and users to comment.
-- [] More information such as servings, calories , nutrition value and etc.
-- [] Admin access to delete, edit and update recipes.
-- [] Admin ability to review recipes before website displays it.
-- [] The ability to upload a photo file instead of a url.
-- [] Auto-sizer and optimizer for photos.
-- [] Improve Search feature.
+- [ ] User registry and login.
+- [ ] Users are only able to update and delete recipes if it was submitted by them.
+- [ ] The option to filter recipes by category, cooktime, preptime and etc.
+- [ ] Pagination for when the library grows.
+- [ ] Weekly automated emails for subsribers.
+- [ ] Ability to rate the recipes and users to comment.
+- [ ] More information such as servings, calories , nutrition value and etc.
+- [ ] Admin access to delete, edit and update recipes.
+- [ ] Admin ability to review recipes before website displays it.
+- [ ] The ability to upload a photo file instead of a url.
+- [ ] Auto-sizer and optimizer for photos.
+- [ ] Improve Search feature.
 
 [**back to top**](#table-of-contents)
 

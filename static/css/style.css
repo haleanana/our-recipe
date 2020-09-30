@@ -354,3 +354,12 @@ a:hover{
 .no-result {
     padding-left: 20px
 }
+
+/*-----------Errors-------------------*/
+
+@media only screen and (max-width: 600px) {
+    .img-results{
+    width: 100%;
+    height: 300px
+    }
+}
