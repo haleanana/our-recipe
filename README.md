@@ -185,6 +185,14 @@ Figma was used to create my mock ups.
 
 The following scenarios were tested:
 
-1. **Submit recipe and Update button**
-- All buttons 
+1. **Submit recipe & Update function**
+- Multiple recipes were added and updated. Recipes checked to see if it was accurately added or updated. Initially, the update function would over write non-updated 
+keys and values. (For more info, see [**Bugs**](#bugs-and-fixes) section )
+- Checked to see any console log errors when adding and updating recipes.
+- Confirmed that the added recipe shows up in the Recipe page once added. 
+- Confirmed that time stamps accurately records date added and date updated.
+2. **Layout and design**
+- Tested on multiple browsers and different devices.
+- Tested responsiveness by putting it through responsivedesignchecker.com
+
 

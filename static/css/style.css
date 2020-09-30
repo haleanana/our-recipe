@@ -55,6 +55,13 @@ h3 {
     margin-bottom: 110px
 }
 
+@media only screen and (max-width : 1024px) {
+
+    .tablet-view {
+        width: 400px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
   .home-image {
     height: 400px;
