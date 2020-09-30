@@ -89,7 +89,7 @@ def show_favourites():
 def sub():
     sub = request.form.to_dict()
     mongo.db.subscribers.insert(sub)
-    flash("Thank you for subscribing.", "info")
+    flash("Thank you for subscribing.")
     return redirect(request.referrer)
 
 @ app.errorhandler(404)

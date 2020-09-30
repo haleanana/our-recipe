@@ -23,7 +23,7 @@ Purposefully done to be clean and simple; users can navigate very easily so they
 
 ## Demo
 
-![demo](https://imgur.com/q0jqf4I)
+<img src = "static/img/mockup/demo.gif">
 
 [**back to top**](#table-of-contents)
 ## UX
@@ -66,6 +66,12 @@ As a user, what I would want in a recipe website:
 4. For recipes to have that "home-made" feel.
 5. Access the website from any device.
 
+### Research
+
+I visited a number of recipes website for inspiration and to discover what works and what doesnt. I personally find it irritating that when I pick a recipe, 
+I have to scroll past blogs and photos before getting to the information Im after. I also found that most recipes have a restaurant and commercial feel 
+to it.
+
 ### Design choices
 
 **Colour scheme**
@@ -107,4 +113,66 @@ Figma was used to create my mock ups.
 
 ## Features
 
+- [x] Users are able to add their own recipes.
+- [x] Users are able to edit and update recipes.
+- [x] Search bar for recipes where users can search any keyword related to the recipe that they want.
+- [x] Time stamps for updated and added recipes.
+- [x] Newest recipe will be the first on the recipe list.
+- [x] Newly added recipes will have a "New" tag. This will disappear the day after its posted.
+- [x] Ability to add recipes on Favourites.
+- [x] Recipes already in Favourites will have the Favourites button disabled and the text will say "Favourited".
+- [x] Fixed Navbar so users can always find their way around.
+- [x] Form validation.
+- [x] Users can subscribe with their email. 
+- [x] Collapsible navbar on mobile view.
+- [x] Jumbotron with "Hello" animated in different languages.
+- [x] Footer with access to navlinks and social links.
+- [x] Recipe library displayed in cards with images.
 
+## Features to add
+
+- [] User registry and login.
+- [] Users are only able to update and delete recipes if it was submitted by them.
+- [] The option to filter recipes by category, cooktime, preptime and etc.
+- [] Pagination for when the library grows.
+- [] Weekly automated emails for subsribers.
+- [] Ability to rate the recipes and users to comment.
+- [] More information such as servings, calories , nutrition value and etc.
+- [] Admin access to delete, edit and update recipes.
+- [] Admin ability to review recipes before website displays it.
+- [] The ability to upload a photo file instead of a url.
+- [] Auto-sizer and optimizer for photos.
+- [] Improve Search feature.
+
+[**back to top**](#table-of-contents)
+
+## Technologies used
+
+**HTML** - To create the foundation and structure of my website. <br>
+**CSS** - To add styles and make my website visually appealing.<br>
+**Figma** - To create the wireframe of my website.<br>
+**Javascript** - To expand the capability and interactivity of my website.<br>
+**Python** - The core language used in this project.<br>
+**Flask, Jinja, Pymongo** - Frameworks used for this project to help tie everything together.<br>
+**Bootstrap CDN** - Components from BS library heavily used in this website.<br>
+**MongoDB/Atlas** - To store and grab user submitted data for my website.<br>
+**GitHub**- To store and share this project.<br>
+**Heroku** - To deploy my website.<br>
+**Font Awesome**- To access the icons that I wanted for this website.<br>
+**Gitpod**- To write my code using their IDE.<br>
+
+## Testing 
+
+### Validated through:
+
+- [W3C Markup Validation]( https://validator.w3.org/) for HTML.
+- [W3C CSS validation](https://jigsaw.w3.org/css-validator/) for CSS.
+- [JSHint](https://jshint.com/) for JavaScript.
+- [Autoprefixer CSS]( https://autoprefixer.github.io/) for browser compatibility.
+
+### Tested through 
+
+- Google Lighthouse
+- [Mobile Friendly Test - Result](https://search.google.com/test/mobile-friendly?id=9Plrf2ZSoX8vpdkyxBGLeA)
+- Chrome developer tools
+- [BrowserStack](https://www.browserstack.com/)
