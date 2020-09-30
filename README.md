@@ -23,6 +23,8 @@ Purposefully done to be clean and simple; users can navigate very easily so they
 
 ## Demo
 
+<a href= "https://our-recipe.herokuapp.com/" target= "_blank">Live Demo</a>
+
 <img width = "100%" src = "static/img/mockup/demo.gif">
 
 [**back to top**](#table-of-contents)
@@ -103,8 +105,10 @@ Figma was used to create my mock ups.
 
 **Mock up Home**
 <img src = "static/img/mockup/mockuphome.png">
+
 **Mock up view recipe page**
 <img src = "static/img/mockup/mockuprecipe.png">
+
 **Mock up add recipe page**
 <img src = "static/img/mockup/mockupaddrecipe.png">
 
@@ -176,3 +180,11 @@ Figma was used to create my mock ups.
 - [Mobile Friendly Test - Result](https://search.google.com/test/mobile-friendly?id=9Plrf2ZSoX8vpdkyxBGLeA)
 - Chrome developer tools
 - [BrowserStack](https://www.browserstack.com/)
+
+**Testing was done by me and 6 users**
+
+The following scenarios were tested:
+
+1. **Submit recipe and Update button**
+- All buttons 
+
