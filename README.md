@@ -104,7 +104,7 @@ the collapsible accordion simply did not allow me to provide enough information 
 Figma was used to create my mock ups.
 
 **Mock up Home**
-<img src = "static/img/mockup/mockuphome.png">
+<img src = "static/img/mockup/mockuphome.png" width = 100%>
 
 **Mock up view recipe page**
 <img src = "static/img/mockup/mockuprecipe.png">
@@ -186,13 +186,50 @@ Figma was used to create my mock ups.
 The following scenarios were tested:
 
 1. **Submit recipe & Update function**
-- Multiple recipes were added and updated. Recipes checked to see if it was accurately added or updated. Initially, the update function would over write non-updated 
-keys and values. (For more info, see [**Bugs**](#bugs-and-fixes) section )
+- Multiple recipes were added and updated. Recipes checked to see if it was accurately added or updated. 
 - Checked to see any console log errors when adding and updating recipes.
 - Confirmed that the added recipe shows up in the Recipe page once added. 
 - Confirmed that time stamps accurately records date added and date updated.
 2. **Layout and design**
 - Tested on multiple browsers and different devices.
-- Tested responsiveness by putting it through responsivedesignchecker.com
+- Tested responsiveness by putting it through responsivedesignchecker.com. See[**Bugs**](#bugs-and-fixes) section )
+3. **Forms**
+- Tried to submit a recipe without filling the forms which website will not allow. A prompt will tell users that forms need to be filled out.
+- Tried filling Image URL text area with non-url text which triggers the form validator.
+- The update forms are pre-filled as intented.
+- Update forms also will not let users submit unless all forms are filled correctly.
+- Subscribe form will not accept submission unless its in email format.
+4. **Favourites**
+- All recipes added to Favourites page are successfully displayed on the Favourites page.
+- Tried to add a recipe thats already in Favourites to Favourites which the website will not allow and is working as intended.
+5. **Newly added items**
+- Added a recipe and it is correctly tagged as "New" on the Recipe page.
+- Newly added recipes also appear first on the Recipes page as intended.
+- Observed that the "New" tag disappears the next day as intended.
+6. **Time stamps**
+- Added recipes correctly displayed the date it was added.
+- Updated recipes correctly displayed the date it was updated.
+- Updated a recipe and it correctly replaced "Added on" to "Last updated" as intented.
+7. **Links**
+- All links were tested and all links correctly redirects to the intended page.
+- Social links redirect to the correct social.
+8. **Buttons**
+- All buttons work and execute their assigned functions.
+9. **Search function**
+- Performed multiple searches using keywords and recipes associated to those keywords are displayed successfully. See[**Bugs**](#bugs-and-fixes) section )
+10. **404 & 500**
+- 404 and 500 error simulated using "abort" and website successfully returns the intended feedback.
 
+## Further testing 
+This website is subjected to further and ongoing testing as new features are added.
 
+## Bug and Fixes
+
+1. **Added on time stamp**
+- Initially, the "Added on" feature would over write and delete all other key values except for the "Added on" key and value. This was remedied by adding the below code before inserting the time stamp directly.
+
+```python
+    added_on = now.strftime('%d %B %Y')
+    recipe['added_on'] = added_on
+```
+2. 
