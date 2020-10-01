@@ -217,6 +217,7 @@ The following scenarios were tested:
 - All buttons work and execute their assigned functions.
 9. **Search function**
 - Performed multiple searches using keywords and recipes associated to those keywords are displayed successfully. See[**Bugs**](#bugs-and-fixes) section )
+- If no results are found,the website successfully returns the "No results" feedback.
 10. **404 & 500**
 - 404 and 500 error simulated using "abort" and website successfully returns the intended feedback.
 
@@ -226,10 +227,23 @@ This website is subjected to further and ongoing testing as new features are add
 ## Bug and Fixes
 
 1. **Added on time stamp**
-- Initially, the "Added on" feature would over write and delete all other key values except for the "Added on" key and value. This was remedied by adding the below code before inserting the time stamp directly.
+- Initially, the "Added on" feature would over write and delete all other key values except for the "Added on" key and value. 
+Fixed: This was remedied by adding the below code before inserting the time stamp directly.
 
 ```python
     added_on = now.strftime('%d %B %Y')
     recipe['added_on'] = added_on
 ```
-2. 
+2. **Flash feedback on Subscribe**
+- Initially, when a user suscribes with their email, the website will throw an error. 
+Fixed: This was solved by adding a 'SECRET_KEY' to Heroku.
+3. **Search**
+- When searching keywords, sometimes the search returns are barely related to my keyword. 
+Status: I would like to optimise this in the future by probably using a 3rd party search engine. 
+4. **Layout and responsiveness**
+- The website is not fully optimised (some grids over lap) to work on "old" devices such as iPhone 4 - 6. 
+Status: Due to those devices being uncommon these days and due to time constraints, this issue remains.
+5. **Some images look pixelated**
+- Due to the lack of control on the size and quality of images submitted, some photos may look pixelated/ stretched.
+Status: I would like to implement a feature wher users are able to upload a file rather than a URL. I would also like to set a size for uniformity.
+Due to the complexity of this feature, this bugs remains for now.
