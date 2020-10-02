@@ -330,5 +330,37 @@ $ git push heroku master
 7. Selected "Master" as branch.
 8. Wait for Heroku to finish and then click "Open app".
 
+[**back to top**](#table-of-contents)
+
+## Credits
+
+**Fontawesome**
+- Icons used for social links. 
+
+**Unsplash**
+- Photo by <a href="https://unsplash.com/@brookelark?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Brooke Lark</a> on <a href="https://unsplash.com/@brookelark?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+
+**Stack Overflow**
+- For fixes and references that helped me create this website.
+
+**Photopea**
+- Used to edit images found through this website.
+
+**W3schools**
+- Used for references and as a refresher.
+
+**Code Institute Mini Task Manager**
+- Used as a reference and guide.
+
+**Mentor - Femi Medale**
+- For helping me with my search function and over all design of my website.
+
+### Special mentions:
+
+- My team of testers which include Estefi, Hines , Craig and Keitel who is always there to help me test my projects and help spot erros and bugs.
+
+### Disclaimer: 
+
+This entire website is used for educational purpose only.
 
 [**back to top**](#table-of-contents)
