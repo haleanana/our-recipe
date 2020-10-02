@@ -39,23 +39,24 @@ recipes from their grandparents, parents, friends and people close to them.
 
 ### Target audience goals
 
-This website is catered for people who loves to cook recipes with a "local" feel regardless of age and gender.
+This website is catered for people who love to cook recipes with a "local" feel regardless of age and gender.
 
 User needs:
 - Selection of unique, non-commercial and user submitted recipes.
 - Be able to share their own recipe.
 - Simple and clean design.
 - Free from ads, blogs and other "clutter".
-- Easy to navigate in any device.
+- Easy to navigate on any device.
 
 How this website meets their needs:
 - Users are able to submit their own recipe.
 - Growing collection of user submitted recipes to choose from.
 - Design is simple and clean but still visually appealing.
-- No blogs , unneccessary clutter or ads.
-- The design such as a fixed Navbar makes its very easy to navigate around.
+- No blogs , unnecessary clutter or ads.
+- The design like the fixed Navbar makes its very easy to navigate around.
 
 ### Goals as a developer
+
 - Expand my portfolio.
 - Practice my Python ,Database and Framework skills as well as refresh my HTML,CSS and JS skills.
 - A communal online cookbook with a collection of unique and user submitted recipes.
@@ -85,15 +86,15 @@ so it caters to all users regardless of gender.
 - The colour combination also presents a clean and simple looking website because the colours are not too "strong".
 
 **Fonts**
-- Intially, I used Pacifico:cursive for the header fonts. I decided to change the fonts as this was not reflective of my design goals.
+- Intially, I used Pacifico:cursive for the header font. I decided to change the font as this was not reflective of my design goals.
 - I'm using Poppins as my main font as this presents a much simpler and cleaner feel which is one of my design goals.
 
 **Ease of use**
 - Navbar is fixed at the top so users will always have access to the main/important pages.
 
 **Recipes Page**
-- Initial design was to display the available recipes (name and cooking time) in a collapsible accordion. The design was updated to cards as
-the collapsible accordion simply did not allow me to provide enough information for the users browsing through the recipes page.
+- Initial design was to display the available recipes (name and cooking time) in a accordion. The design was updated to cards as
+the accordion design simply did not allow me to provide enough information for the users browsing through the recipes page.
 - Cards are nows used to display the available recipes as this allows me to display a lot more information to the user such as images, short description, prep time and etc.
 - Cards also provide a cleaner and less cluttered look which reflects the "clean" look goal.
 - Search bar added so users can quickly search recipes.
@@ -106,7 +107,7 @@ the collapsible accordion simply did not allow me to provide enough information 
 Figma was used to create my mock ups.
 
 **Mock up Home**
-<img src = "static/img/mockup/mockuphome.png" width = 100%>
+<img src = "static/img/mockup/mockuphome.png">
 
 **Mock up view recipe page**
 <img src = "static/img/mockup/mockuprecipe.png">
@@ -174,7 +175,7 @@ url_image: String
 added_on: String (note: This will be replaced by "last_update:" once recipe is updated)
 fave: String
 ```
-** To store Subscribers**
+**To store Subscribers**
 ```
 _id:ObjectID
 email: String
@@ -224,7 +225,7 @@ The following scenarios were tested:
 - Confirmed that time stamps accurately records date added and date updated.
 2. **Layout and design**
 - Tested on multiple browsers and different devices.
-- Tested responsiveness by putting it through responsivedesignchecker.com. (See[**Bugs**](#bugs-and-fixes) section )
+- Tested responsiveness by putting it through responsivedesignchecker.com. (See [**Bugs**](#bugs-and-fixes) section )
 3. **Forms**
 - Tried to submit a recipe without filling the forms which website will not allow. A prompt will tell users that forms need to be filled out.
 - Tried filling Image URL text area with non-url text which triggers the form validator.
@@ -248,7 +249,7 @@ The following scenarios were tested:
 8. **Buttons**
 - All buttons work and execute their assigned functions.
 9. **Search function**
-- Performed multiple searches using keywords and recipes associated to those keywords are displayed successfully. See[**Bugs**](#bugs-and-fixes) section )
+- Performed multiple searches using keywords and recipes associated to those keywords are displayed successfully. See [**Bugs**](#bugs-and-fixes) section )
 - If no results are found,the website successfully returns the "No results" feedback.
 10. **404 & 500**
 - 404 and 500 error simulated using "abort" and website successfully returns the intended feedback.
@@ -256,7 +257,7 @@ The following scenarios were tested:
 ## Further testing 
 This website is subjected to further and ongoing testing as new features are added.
 
-## Bug and Fixes
+## Bugs and Fixes
 
 1. **Added on time stamp**
 - Initially, the "Added on" feature would over write and delete all other key values except for the "Added on" key and value. 
