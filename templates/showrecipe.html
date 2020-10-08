@@ -18,24 +18,24 @@
   <br />
   <div class="row">
     <div class="col">
-    {% if recipe.fave %}
+      {% if recipe.fave %}
       <button class="btn btn-primary button-disabled btn-lg btn-block">
         Favourited
       </button>
-    {% else %}
-    <form method="POST" action="{{url_for('add_to_favourites', recipe_id = recipe._id)}}">
-      <button type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block">
-        Favourites
-      </button>
-    </form>
-    {%endif %}
+      {% else %}
+      <form method="POST" action="{{url_for('add_to_favourites', recipe_id = recipe._id)}}">
+        <button type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block">
+          Favourites
+        </button>
+      </form>
+      {%endif %}
     </div>
     <div class="col">
-    <a href="{{url_for('edit_recipe', recipe_id = recipe._id)}}">
-      <button id="fave-btn" class="btn btn-primary btn-lg btn-block">
-        Edit Recipe
-      </button>
-    </a>
+      <a href="{{url_for('edit_recipe', recipe_id = recipe._id)}}">
+        <button id="fave-btn" class="btn btn-primary btn-lg btn-block">
+          Edit Recipe
+        </button>
+      </a>
     </div>
   </div>
   <br />

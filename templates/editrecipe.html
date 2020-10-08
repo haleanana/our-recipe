@@ -5,14 +5,7 @@
   <div class="container">
     <div class="form-group">
       <label for="recipe">Recipe Name</label>
-      <input
-        value="{{recipe.recipe_name}}"
-        type="text"
-        class="form-control"
-        id="recipe_name"
-        name="recipe_name"
-        required
-      />
+      <input value="{{recipe.recipe_name}}" type="text" class="form-control" id="recipe_name" name="recipe_name" required />
     </div>
     <div class="form-group">
       <label for="exampleFormControlSelect1">Select Category</label>
@@ -20,81 +13,39 @@
         {% for category in categories %} {% if category.category_name ==
         recipe.category_name %}
 
-        <option value="{{category.category_name}}" selected
-          >{{category.category_name}}</option
-        >
+        <option value="{{category.category_name}}" selected>{{category.category_name}}</option>
         {% else %}
 
-        <option value="{{category.category_name}}"
-          >{{category.category_name}}</option
-        >
+        <option value="{{category.category_name}}">{{category.category_name}}</option>
         {% endif %} {% endfor %}
       </select>
     </div>
     <div class="form-group">
       <label for="recipe_description">Short Description</label>
-      <textarea
-        value="{{recipe.recipe_description}}"
-        class="form-control"
-        id="recipe_description"
-        rows="2"
-        name="recipe_description"
-        maxlength="150"
-        required
-      >
-{{recipe.recipe_description}}</textarea
-      >
+      <textarea value="{{recipe.recipe_description}}" class="form-control" id="recipe_description" rows="2" name="recipe_description" maxlength="150" required>
+      {{recipe.recipe_description}}</textarea>
     </div>
     <div class="form-group">
       <label for="ingredients">Ingredients</label>
-      <textarea
-        class="form-control"
-        id="ingredients"
-        rows="3"
-        name="ingredients"
-        required
-      >
-{{recipe.ingredients}}</textarea
-      >
+      <textarea class="form-control" id="ingredients" rows="3" name="ingredients" required>
+      {{recipe.ingredients}}</textarea>
     </div>
     <div class="form-group">
       <label for="methods">Methods</label>
       <textarea class="form-control" id="methods" rows="5" name="methods" required>
-{{recipe.methods}}</textarea
-      >
+      {{recipe.methods}}</textarea>
     </div>
     <div class="form-group">
       <label for="prep_time">Prep time</label>
-      <input
-        type="text"
-        class="form-control"
-        id="prep_time"
-        name="prep_time"
-        value="{{recipe.prep_time}}"
-        required
-      />
+      <input type="text" class="form-control" id="prep_time" name="prep_time" value="{{recipe.prep_time}}" required />
     </div>
     <div class="form-group">
       <label for="cooking_time">Cooking time</label>
-      <input
-        type="text"
-        class="form-control"
-        id="cooking_time"
-        name="cooking_time"
-        value="{{recipe.cooking_time}}"
-        required
-      />
-    </div> 
-     <div class="form-group">
+      <input type="text" class="form-control" id="cooking_time" name="cooking_time" value="{{recipe.cooking_time}}" required />
+    </div>
+    <div class="form-group">
       <label for="url_image">Image Url</label>
-      <input
-        type="url"
-        class="form-control"
-        id="url_image"
-        name="url_image"
-        value="{{recipe.url_image}}"
-        required
-      />
+      <input type="url" class="form-control" id="url_image" name="url_image" value="{{recipe.url_image}}" required />
     </div>
 
   </div>

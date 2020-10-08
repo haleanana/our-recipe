@@ -1,51 +1,30 @@
 {% extends 'base.html' %} {% block content %}
+
 <!---Page where users can add recipe--->
 <h3 class="text-center">Add Recipe</h3>
 <form method="POST" action="{{url_for('insert_recipe')}}">
   <div class="container">
     <div class="form-group">
       <label for="recipe">Recipe Name</label>
-      <input
-        type="text"
-        class="form-control"
-        id="recipe_name"
-        name="recipe_name"
-        required
-        placeholder="Recipe name"
-      />
+      <input type="text" class="form-control" id="recipe_name" name="recipe_name" required placeholder="Recipe name" />
     </div>
     <div class="form-group">
       <label for="categories">Select Category</label>
       <select class="form-control" id="category" name="category_name">
         {% for category in categories %}
-        <option value="{{category.category_name}}"
-          >{{category.category_name}}</option
-        >
+
+        <option value="{{category.category_name}}">{{category.category_name}}</option>
         {% endfor %}
+
       </select>
     </div>
     <div class="form-group">
       <label for="description">Short Description</label>
-      <textarea
-        class="form-control"
-        id="recipe_description"
-        rows="2"
-        name="recipe_description"
-        maxlength="150"
-        required
-        placeholder="Please write a short description.(150 characters max)"
-      ></textarea>
+      <textarea class="form-control" id="recipe_description" rows="2" name="recipe_description" maxlength="150" required placeholder="Please write a short description.(150 characters max)"></textarea>
     </div>
     <div class="form-group">
       <label for="ingredients">Ingredients</label>
-      <textarea
-        class="form-control"
-        id="ingredients"
-        rows="3"
-        name="ingredients"
-        placeholder="Please list each ingredient in it's own line."
-        required
-      ></textarea>
+      <textarea class="form-control" id="ingredients" rows="3" name="ingredients" placeholder="Please list each ingredient in it's own line." required></textarea>
     </div>
     <div class="form-group">
       <label for="methods">Methods</label>
@@ -53,29 +32,15 @@
     </div>
     <div class="form-group">
       <label for="recipe">Prep time</label>
-      <input type="text" class="form-control" id="prep_time" name="prep_time" placeholder="Please write in minutes. Eg. 120 mins" required/>
+      <input type="text" class="form-control" id="prep_time" name="prep_time" placeholder="Please write in minutes. Eg. 120 mins" required />
     </div>
     <div class="form-group">
       <label for="recipe">Cooking time</label>
-      <input
-        type="text"
-        class="form-control"
-        id="cooking_time"
-        name="cooking_time"
-        placeholder="Please write in minutes. Eg. 120 mins"
-        required
-      />
+      <input type="text" class="form-control" id="cooking_time" name="cooking_time" placeholder="Please write in minutes. Eg. 120 mins" required />
     </div>
-  <div class="form-group">
+    <div class="form-group">
       <label for="url_image">Image Url</label>
-      <input
-        type="url"
-        class="form-control"
-        id="url_image"
-        name="url_image"
-        placeholder="Please provide a valid URL."
-        required
-      />
+      <input type="url" class="form-control" id="url_image" name="url_image" placeholder="Please provide a valid URL." required />
     </div>
   </div>
   <div class="container">
@@ -83,6 +48,5 @@
       Submit Recipe
     </button>
   </div>
-
 </form>
 {% endblock %}
