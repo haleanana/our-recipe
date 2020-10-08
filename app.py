@@ -17,32 +17,38 @@ app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 mongo = PyMongo(app)
 now = datetime.datetime.now()
 
+# Home
 @app.route('/')
 def home():
     #abort(404)#
     #abort(500)#
     return render_template("index.html", recipes=mongo.db.recipes.find())
 
+# Shows all available recipes
 @app.route('/recipes')
 def recipes():
     query = request.args.get("query")
     if not query:
         recipes=mongo.db.recipes.find().sort('added_on', -1)
     else:
+        #Finds the recipe using keywords the user enters
         mongo.db.recipes.create_index([('$**', 'text')])
         recipes = mongo.db.recipes.find({"$text":{"$search": query}}).limit(10)
     return render_template("recipes.html",  now = now.strftime('%d %B %Y'), recipes=recipes)
 
+# Shows the selected recipes info
 @app.route('/show_recipe/<recipe_id>')
 def show_recipe(recipe_id):
     my_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
     return render_template('showrecipe.html', recipe= my_recipe, categories = all_categories)
 
+# Returns the form to users for adding recipes
 @app.route('/add_recipe')
 def add_recipe():
     return render_template("addrecipe.html", categories= mongo.db.categories.find())
 
+# Adds the data from the form to my database
 @app.route('/insert_recipe', methods =['POST'])
 def insert_recipe():
     recipe = request.form.to_dict()
@@ -50,13 +56,15 @@ def insert_recipe():
     recipe['added_on'] = added_on
     mongo.db.recipes.insert_one(recipe)
     return redirect(url_for('recipes'))
-
+    
+# Returns the form to users for updating recipes
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     my_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
     return render_template('editrecipe.html', recipe= my_recipe, categories = all_categories)
 
+# Updates the data when users submit
 @app.route('/update_recipe/<recipe_id>', methods = ['POST'])
 def update_recipe(recipe_id):
     mongo.db.recipes.update({'_id': ObjectId(recipe_id)},
@@ -74,6 +82,7 @@ def update_recipe(recipe_id):
 
     return redirect(url_for('recipes'))
 
+# Adds the selected recipe to the favourites page
 @app.route('/favourites/<recipe_id>', methods = ['POST'])
 def add_to_favourites(recipe_id):
     mongo.db.recipes.update({'_id': ObjectId(recipe_id)},
@@ -81,10 +90,12 @@ def add_to_favourites(recipe_id):
     })
     return render_template('favourites.html', recipes = mongo.db.recipes.find())
 
+# Shows all the recipe that has been favourited
 @app.route('/show_favourites')
 def show_favourites():
     return render_template('favourites.html', recipes = mongo.db.recipes.find())
 
+# Adds the email entered to my database
 @app.route('/sub', methods = ['POST'])
 def sub():
     sub = request.form.to_dict()
