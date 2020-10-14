@@ -20,15 +20,14 @@ now = datetime.datetime.now()
 # Home
 @app.route('/')
 def home():
-    recipes = mongo.db.recipes.find().sort('added_on', -1).limit(3)
-    return render_template("index.html", recipes =recipes)
+    return render_template("index.html", recipes = mongo.db.recipes.find().sort('added_on', -1).limit(3))
 
 # Shows all available recipes
 @app.route('/recipes')
 def recipes():
     query = request.args.get("query")
     if not query:
-        recipes=mongo.db.recipes.find().sort('added_on', -1)
+        recipes = mongo.db.recipes.find().sort('added_on', -1)
     else:
         #Finds the recipe using keywords the user enters
         mongo.db.recipes.create_index([('$**', 'text')])
@@ -51,7 +50,7 @@ def add_recipe():
 @app.route('/insert_recipe', methods =['POST'])
 def insert_recipe():
     recipe = request.form.to_dict()
-    added_on = now.strftime('%d %B %Y')
+    added_on = now.strftime('%Y/%m/%d')
     recipe['added_on'] = added_on
     mongo.db.recipes.insert_one(recipe)
     return redirect(url_for('recipes'))
@@ -75,7 +74,7 @@ def update_recipe(recipe_id):
     'prep_time': request.form.get('prep_time'), 
     'cooking_time': request.form.get('cooking_time'),
     'url_image': request.form.get('url_image'),
-    'last_update': now.strftime('%d %B %Y'),
+    'last_update': now.strftime('%Y/%m/%d'),
 
     })
 
