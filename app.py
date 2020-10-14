@@ -39,6 +39,9 @@ def recipes():
 def show_recipe(recipe_id):
     my_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
     all_categories = mongo.db.categories.find()
+    mongo.db.recipes.update(my_recipe,
+    {'$inc' : {'views': 1}
+    })
     return render_template('showrecipe.html', recipe= my_recipe, categories = all_categories)
 
 # Returns the form to users for adding recipes
