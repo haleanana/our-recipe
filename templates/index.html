@@ -44,5 +44,23 @@
   </div>
   <div class="container">
   <h3 class="text-center">Most Viewed</h3>
+    <div class="row row-cols-1 row-cols-md-3">
+      {% for recipe in views %}
+      <div class="col mb-4">
+        <div class="card h-100">
+          <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}"><img src="{{recipe.url_image}}" class="card-img-top" alt="{{recipe.recipe_name}}" /></a>
+          <div class="card-body">
+            <h5 class="card-title">{{recipe.recipe_name}}</h5>
+            <p class="card-text">{{recipe.recipe_description}}</p>
+          </div>
+          <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}">
+            <div class="card-footer text-center">
+              View recipe
+            </div>
+          </a>
+        </div>
+      </div>
+        {% endfor %}
+    </div> 
   </div>
 {% endblock %}

@@ -20,7 +20,7 @@ now = datetime.datetime.now()
 # Home
 @app.route('/')
 def home():
-    return render_template("index.html", recipes = mongo.db.recipes.find().sort('added_on', -1).limit(3))
+    return render_template("index.html", recipes = mongo.db.recipes.find().sort('added_on', -1).limit(3), views = mongo.db.recipes.find().sort('views', -1).limit(3))
 
 # Shows all available recipes
 @app.route('/recipes')
