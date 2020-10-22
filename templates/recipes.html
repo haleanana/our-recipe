@@ -23,7 +23,7 @@
           {% if recipe.added_on == now %}
           <h4 class="new-badge">New!</h4>
           {% endif %}
-          <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}">
+          <a class='recipe-link' href="{{url_for('show_recipe', recipe_id = recipe._id)}}">
             <img src="{{recipe.url_image}}" class="card-img-top" alt="{{recipe.recipe_name}}" />
           </a>
           <div class="card-body">

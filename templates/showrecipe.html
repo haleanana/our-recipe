@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <!---Page to display recipe when recipe is clicked--->
-<h3 class="text-center">{{recipe.recipe_name}}</h3>
+<h3 class="text-center recipe-name">{{recipe.recipe_name}}</h3>
 <div class="container container-margin">
   <div class="row img-div">
     <img src="{{recipe.url_image}}" alt="Recipe Image" class="recipe-img" />
@@ -12,19 +12,19 @@
     </h4>
   </div>
   <br />
-  <div class="row text-center border-black">
+  <div class="row text-center border-black recipe-des">
     <p>{{recipe.recipe_description}}</p>
   </div>
   <br />
   <div class="row">
     <div class="col">
-      {% if recipe.fave %}
+      <!--{% if recipe.fave %}
       <button class="btn btn-primary button-disabled btn-lg btn-block">
         Favourited
       </button>
-      {% else %}
-      <form method="POST" action="{{url_for('add_to_favourites', recipe_id = recipe._id)}}">
-        <button type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block">
+      {% else %}-->
+      <!--<form method="POST" action="{{url_for('add_to_favourites', recipe_id = recipe._id)}}">-->
+        <button onclick="addFavourites('{{recipe._id}}','{{url_for('show_recipe', recipe_id = recipe._id)}}', '{{recipe.recipe_name}}', '{{recipe.recipe_description}}', '{{recipe.url_image}}')" type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block">
           Favourites
         </button>
       </form>
@@ -52,7 +52,7 @@
     <br id="br-on-mobile" />
     <div class="col-8" id="showRecipeMobile2">
       {% for methods in recipe.methods.splitlines() %}
-      <p>{{methods}}</p>
+      <p class>{{methods}}</p>
       {% endfor %}
     </div>
   </div>

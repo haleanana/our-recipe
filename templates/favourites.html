@@ -3,7 +3,7 @@
 
 <body>
   <h3 class="text-center">Favourites</h3>
-  <div class="container">
+  <!--<div class="container">
     <div class="row row-cols-1 row-cols-md-3">
       {% for recipe in recipes %} {% if recipe.fave == 'Yes' %}
       <div class="col mb-4">
@@ -27,7 +27,13 @@
       </div>
       {% endif %} {% endfor %}
     </div>
-  </div>
+  </div>-->
+<div class="container">
+	<div id="favourites-wrapper" class="row row-cols-1 row-cols-md-3">
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+ <script src="{{url_for('static', filename='js/favourites.js')}}"></script>
 </body>
 
 {% endblock %}
