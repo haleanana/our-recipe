@@ -376,6 +376,14 @@ a:hover {
   padding-left: 20px
 }
 
+/*-----------Favourites-------------------*/
+
+#remove {
+    position: absolute;
+    right: 10px;
+    color: red;
+}
+
 /*-----------Errors-------------------*/
 
 @media only screen and (max-width: 600px) {

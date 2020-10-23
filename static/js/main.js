@@ -11,7 +11,6 @@ to do this*/
   }
 });*/
 const FAVOURITE_RECIPES = 'FAVOURITE_RECIPES'
-const faveList = []
 
 function addFavourites(id, url, recipeName, recipeDescription, recipeImage){
     const recipe = {
@@ -22,7 +21,7 @@ function addFavourites(id, url, recipeName, recipeDescription, recipeImage){
     
     if (favourites) {
         favourites = JSON.parse(favourites)
-        if (favourites.some(item => item.id === recipe.id)) return alert('Recipe has been added already')
+        if (favourites.some(item => item.id === recipe.id)) return alert('Recipe is already in your favourites')
         favourites.push(recipe)
     } else {
         favourites = [recipe]
