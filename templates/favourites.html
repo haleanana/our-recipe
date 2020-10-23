@@ -3,37 +3,11 @@
 
 <body>
   <h3 class="text-center">Favourites</h3>
-  <!--<div class="container">
-    <div class="row row-cols-1 row-cols-md-3">
-      {% for recipe in recipes %} {% if recipe.fave == 'Yes' %}
-      <div class="col mb-4">
-        <div class="card h-100">
-          <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}"><img src="{{recipe.url_image}}" class="card-img-top" alt="{{recipe.recipe_name}}" /></a>
-          <div class="card-body">
-            <h5 class="card-title">{{recipe.recipe_name}}</h5>
-            <p class="card-text">{{recipe.recipe_description}}</p>
-            {% if recipe.added_on %}
-            <small class="text-muted">Added on: {{recipe.added_on}}</small>
-            {% else %}
-            <small class="text-muted">Last Updated: {{recipe.last_update}}</small>
-            {% endif %}
-          </div>
-          <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}">
-            <div class="card-footer text-center">
-              View recipe
-            </div>
-          </a>
-        </div>
-      </div>
-      {% endif %} {% endfor %}
-    </div>
-  </div>-->
-<div class="container">
-	<div id="favourites-wrapper" class="row row-cols-1 row-cols-md-3">
-	</div>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
- <script src="{{url_for('static', filename='js/favourites.js')}}"></script>
+  <div class="container">
+    <div id="favourites-wrapper" class="row row-cols-1 row-cols-md-3"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="{{url_for('static', filename='js/favourites.js')}}"></script>
 </body>
 
 {% endblock %}

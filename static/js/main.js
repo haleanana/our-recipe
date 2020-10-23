@@ -39,7 +39,3 @@ function removeFavourites(id) {
         location.reload()
     }
 }
-
-
-
-

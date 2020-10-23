@@ -12,26 +12,6 @@ function loadFavourites() {
         $('#favourites-wrapper').empty().append(recipeItems)
     }
 }
-/*
-function recipeItem(recipe) {
-    return `
-  <div class="col mb-4">
-        <div class="card h-100">
-          <a href="${recipe.url}"><img class="card-img-top" src="${recipe.recipeImage}" alt="${recipe.recipeNam}"/></a>
-          <div class="card-body">
-            <h5 id="recipe-name">${recipe.recipeName}</h5>
-            <p class="card-text" id="recipe-des">${recipe.recipeDescription}</p>
-            <a href="${recipe.url}"><div class="card-footer text-center">
-            <div class = "card-footer text-center">
-                View recipe
-            </div>
-            </a>
-        </div>
-      </div>
-  </div>
-  `
-}
-*/
 
 function recipeItem(recipe) {
     return `

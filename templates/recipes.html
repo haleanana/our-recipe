@@ -35,8 +35,6 @@
               {% else %}
               <small class="text-muted">Last Updated: {{recipe.last_update}}</small>
               {% endif %}
-              <!--<a href="{{url_for('edit_recipe', recipe_id = recipe._id)}}"><i class="fas fa-edit">
-						</i><small class="text-muted">Edit</small></a>--->
             </span>
           </div>
           <a href="{{url_for('show_recipe', recipe_id = recipe._id)}}">

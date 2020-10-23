@@ -384,6 +384,11 @@ a:hover {
     color: red;
 }
 
+#remove:hover{
+    cursor: pointer;
+    font-size: 120%;
+}
+
 /*-----------Errors-------------------*/
 
 @media only screen and (max-width: 600px) {
