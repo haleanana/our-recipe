@@ -62,7 +62,7 @@ How this website meets their needs:
 - A communal online cookbook with a collection of unique and user submitted recipes.
 - Increase users which will also grow the number of recipes available.
 
-### User stores
+### User stories
 
 As a user, what I would want in a recipe website:
 1. Direct and easy way to get to the recipe I want.
@@ -106,14 +106,14 @@ the accordion design simply did not allow me to provide enough information for t
 
 Figma was used to create my mock ups.
 
-**Mock up Home**
+**Initial Mock up Home**
 <img src = "static/img/mockup/mockuphome.png">
-
-**Mock up view recipe page**
-<img src = "static/img/mockup/mockuprecipe.png">
 
 **Mock up add recipe page**
 <img src = "static/img/mockup/mockupaddrecipe.png">
+
+**Revised Mock up Home**
+<img src = "static/img/mockup/new_concept.png">
 
 
 [**back to top**](#table-of-contents)
@@ -125,9 +125,9 @@ Figma was used to create my mock ups.
 - [x] Search bar for recipes where users can search any keyword related to the recipe that they want.
 - [x] Time stamps for updated and added recipes.
 - [x] Newest recipe will be the first on the recipe list.
-- [x] Newly added recipes will have a "New" tag. This will disappear the day after its posted.
+- [x] Quick access to newest and most viewed recipes on home page.
 - [x] Ability to add recipes on Favourites.
-- [x] Recipes already in Favourites will have the Favourites button disabled and the text will say "Favourited".
+- [x] Recipes already in Favourites will alert the user that recipe is already in favourites and will prevent them from adding a duplicate.
 - [x] Fixed Navbar so users can always find their way around.
 - [x] Form validation.
 - [x] Users can subscribe with their email. 
