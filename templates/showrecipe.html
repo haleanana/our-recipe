@@ -32,7 +32,7 @@
   </div>
   <br />
   <div class="row border-black">
-    <div class="col-4 show-recipe-background" id="showRecipeMobile">
+    <div class="col-4 show-recipe-background" id="ingredientsMobile">
       <ul>
         {% for ingredients in recipe.ingredients.splitlines()%}
         <li>
@@ -42,7 +42,7 @@
       </ul>
     </div>
     <br id="br-on-mobile" />
-    <div class="col-8" id="showRecipeMobile2">
+    <div class="col-8" id="methodsMobile">
       {% for methods in recipe.methods.splitlines() %}
       <p class>{{methods}}</p>
       {% endfor %}

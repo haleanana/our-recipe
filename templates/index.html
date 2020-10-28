@@ -1,10 +1,16 @@
 {% extends 'base.html' %} {% block content %}
 
 <div class="container-fluid margin-bottom">
-  <div class="row home-padding">
-    <img class="home-image" src="static/img/heroimage.webp" alt="Food Panorama" />
-    <img class="image-mob-view" src="static/img/mobileview.webp" alt="Hero Image" />
-  </div>
+	<picture class="row home-padding">
+		<source srcset="static/img/heroimage.webp" type="image/webp">
+		<source srcset="static/img/heroimage.png" type="image/png">
+		<img class="home-image" src="static/img/heroimage.png" alt="Hero image" />
+	</picture>
+    <picture class="row home-padding">
+        <source srcset="static/img/mobileview.webp" type="image/webp">
+        <source srcset="static/img/mobileview-min.png" type="image/png">
+		<img class="image-mob-view" src="static/img/mobileview-min.png" alt="Hero image" />
+    </picture>
 </div>
 <div class="container container-jumbotron">
   <div class="row">

@@ -31,20 +31,10 @@ h3 {
   justify-content: center;
 }
 
-.home-text {
-  position: absolute;
-  right: 30px;
-  bottom: 400px;
-
-}
-
 .jumbotron {
   height: 339px;
 }
 
-.headline-mob-view {
-  display: none;
-}
 
 .container-jumbotron {
   position: absolute;
@@ -52,7 +42,7 @@ h3 {
 }
 
 .margin-bottom {
-  margin-bottom: 110px
+  margin-bottom: 50px
 }
 
 @media only screen and (max-width : 1024px) {
@@ -73,9 +63,6 @@ h3 {
     width: 100%
   }
 
-  .headline-mob-view {
-    display: unset;
-  }
 
   .mob-view-row {
     margin: 0 auto;
@@ -289,6 +276,17 @@ a:hover {
 
   #br-on-mobile {
     display: flex
+  }
+
+  #ingredientsMobile{
+      flex: unset;
+      max-width: unset;
+  }
+
+  #methodsMobile{
+      flex: unset;
+      max-width: unset;
+      padding-top: 10px;
   }
 }
 
