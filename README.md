@@ -126,7 +126,7 @@ Figma was used to create my mock ups.
 - [x] Time stamps for updated and added recipes.
 - [x] Newest recipe will be the first on the recipe list.
 - [x] Quick access to newest and most viewed recipes on home page.
-- [x] Ability to add recipes on Favourites.
+- [x] Ability to add recipes in Favourites using users local storage.
 - [x] Recipes already in Favourites will alert the user that recipe is already in favourites and will prevent them from adding a duplicate.
 - [x] Fixed Navbar so users can always find their way around.
 - [x] Form validation.
@@ -221,7 +221,7 @@ The following scenarios were tested:
 1. **Submit recipe & Update function**
 - Multiple recipes were added and updated. Recipes checked to see if it was accurately added or updated. 
 - Checked to see any console log errors when adding and updating recipes.
-- Confirmed that the added recipe shows up in the Recipe page once added. 
+- Confirmed that the added recipe shows in "Recently Added" on the Home page and also shows up in the Recipe page. 
 - Confirmed that time stamps accurately records date added and date updated.
 2. **Layout and design**
 - Tested on multiple browsers and different devices.
@@ -236,9 +236,7 @@ The following scenarios were tested:
 - All recipes added to Favourites page are successfully displayed on the Favourites page.
 - Tried to add a recipe thats already in Favourites to Favourites which the website will not allow and is working as intended.
 5. **Newly added items**
-- Added a recipe and it is correctly tagged as "New" on the Recipe page.
 - Newly added recipes also appear first on the Recipes page as intended.
-- Observed that the "New" tag disappears the next day as intended.
 6. **Time stamps**
 - Added recipes correctly displayed the date it was added.
 - Updated recipes correctly displayed the date it was updated.
@@ -275,7 +273,7 @@ Fixed: This was solved by adding a 'SECRET_KEY' to Heroku.
 Status: I would like to optimise this in the future by probably using a 3rd party search engine. 
 4. **Layout and responsiveness**
 - The website is not fully optimised (some grids over lap) to work on older devices such as iPhone 4 - 6. 
-Status: Due to those devices being uncommon these days and due to time constraints, this issue remains.
+Status: Due to those devices being uncommon these days and due to time constraints, I have decided to leave this as it is.
 5. **Some images look pixelated**
 - Due to the lack of control on the size and quality of images submitted, some photos may look pixelated/ stretched.
 Status: I would like to implement a feature wher users are able to upload a file rather than a URL. I would also like to set a size for uniformity.
