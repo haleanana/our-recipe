@@ -279,6 +279,8 @@ Status: Due to those devices being uncommon these days and due to time constrain
 Status: I would like to implement a feature wher users are able to upload a file rather than a URL. I would also like to set a size for uniformity.
 Due to the complexity of this feature, this bugs remains for now.
 
+**Note: "Add recipe" button is designed to be overlapping the Jumbotron border on certain screen sizes and not on other screen sizes**
+
 [**back to top**](#table-of-contents)
 
 ## Deployment ##
