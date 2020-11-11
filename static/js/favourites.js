@@ -12,7 +12,7 @@ function loadFavourites() {
         $('#favourites-wrapper').empty().append(recipeItems)
     }
 }
-
+//Displays favourited recipes in Favourites
 function recipeItem(recipe) {
     return `
    <div class="col mb-4">

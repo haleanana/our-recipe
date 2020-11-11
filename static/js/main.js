@@ -1,5 +1,5 @@
 const FAVOURITE_RECIPES = 'FAVOURITE_RECIPES'
-
+//Add recipe to favourites using local storage
 function addFavourites(id, url, recipeName, recipeDescription, recipeImage){
     const recipe = {
         id, url, recipeName, recipeDescription,recipeImage
@@ -17,7 +17,7 @@ function addFavourites(id, url, recipeName, recipeDescription, recipeImage){
     localStorage.setItem(FAVOURITE_RECIPES, JSON.stringify(favourites))
     
 }
-
+//Remove recipe from favourites
 function removeFavourites(id) {
     let favourites = localStorage.getItem(FAVOURITE_RECIPES)
     if (favourites) {
