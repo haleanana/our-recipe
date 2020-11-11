@@ -138,7 +138,6 @@ a {
 a:hover {
   text-decoration: none;
   color: black;
-  border-color: none;
 }
 
 
@@ -206,14 +205,6 @@ a:hover {
   width: 100%;
   overflow: hidden;
   padding: 5px;
-}
-
-.new-badge {
-  position: absolute;
-  top: 10px;
-  right: 10 px !important;
-  background: #51808b;
-  color: #fff;
 }
 
 /*-----------Show recipe-------------------*/
@@ -332,7 +323,11 @@ a:hover {
 }
 
 .flash-padding {
-  padding-left: 40px
+  padding-left: 40px;
+}
+
+.btn-margin {
+    margin-top: 20px;
 }
 
 @media only screen and (max-width: 600px) {

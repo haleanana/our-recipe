@@ -278,6 +278,9 @@ Status: Due to those devices being uncommon these days and due to time constrain
 - Due to the lack of control on the size and quality of images submitted, some photos may look pixelated/ stretched.
 Status: I would like to implement a feature wher users are able to upload a file rather than a URL. I would also like to set a size for uniformity.
 Due to the complexity of this feature, this bugs remains for now.
+6. **Edit/Update recipe text area blank spaces**
+- During edit/update, the text area for some recipes have empty white spaces. Issue might be fixed by making textarea code one line.
+This could also be caused by people editing and messing with the recipes. This issue is still under observation.
 
 **Note: "Add recipe" button is designed to be overlapping the Jumbotron border on certain screen sizes and not on other screen sizes**
 
