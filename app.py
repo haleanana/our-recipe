@@ -3,13 +3,13 @@ from bson.objectid import ObjectId
 import os
 from os import path
 import datetime
-from flask import Flask, render_template, redirect, request, url_for, flash,
-abort
+from flask import Flask, render_template, redirect, request, url_for, flash
+
+
+app = Flask(__name__)
 
 if path.exists('env.py'):
     import env
-
-app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get('MONGO_DB')
 app.config['MONGO_URI'] = os.environ.get('MONGO_URI')
