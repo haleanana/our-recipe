@@ -1,13 +1,13 @@
 {% extends 'base.html' %} {% block content %}
-<!---Recipes added to Favourites will show up here--->
+<!---Recipes added to Favourites will show up here-->
 
-<body>
+<section>
   <h3 class="text-center">Favourites</h3>
   <div class="container">
     <div id="favourites-wrapper" class="row row-cols-1 row-cols-md-3"></div>
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="{{url_for('static', filename='js/favourites.js')}}"></script>
-</body>
+</section>
 
 {% endblock %}

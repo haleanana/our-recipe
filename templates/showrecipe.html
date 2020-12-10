@@ -18,13 +18,13 @@
   <br />
   <div class="row">
     <div class="col">
-        <button onclick="addFavourites('{{recipe._id}}','{{url_for('show_recipe', recipe_id = recipe._id)}}', `{{recipe.recipe_name}}`, '{{recipe.recipe_description}}', '{{recipe.url_image}}')" type="submit" id="fave-btn" class="btn btn-primary btn-lg btn-block">
+        <button onclick="addFavourites('{{recipe._id}}','{{url_for('show_recipe', recipe_id = recipe._id)}}', `{{recipe.recipe_name}}`, '{{recipe.recipe_description}}', '{{recipe.url_image}}')" type="submit" class="btn btn-primary btn-lg btn-block">
           Favourites
         </button>
     </div>
     <div class="col">
       <a href="{{url_for('edit_recipe', recipe_id = recipe._id)}}">
-        <button id="fave-btn" class="btn btn-primary btn-lg btn-block">
+        <button class="btn btn-primary btn-lg btn-block">
           Edit Recipe
         </button>
       </a>

@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row row-margin">
       <div class="col">
-        <!---Search Button--->
+        <!---Search Button-->
         <form class="form-inline my-2 my-lg-0" method="GET" action="{{ url_for('recipes') }}">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="query" name="query" />
           <button class="btn my-2 my-sm-0" type="submit">
@@ -17,7 +17,7 @@
     </div>
     <div class="row row-cols-1 row-cols-md-3">
       {% if recipes.count() %} {% for recipe in recipes %}
-      <!---For loop used to display recipe from database --->
+      <!---For loop used to display recipe from database -->
       <div class="col mb-4">
         <div class="card h-100">
           <a class="recipe-link"  href="{{url_for('show_recipe', recipe_id = recipe._id)}}">
