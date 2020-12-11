@@ -77,6 +77,8 @@ def insert_recipe():
 
 
 # Returns the form to users for updating recipes
+
+
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
     my_recipe = mongo.db.recipes.find_one({'_id': ObjectId(recipe_id)})
@@ -113,8 +115,16 @@ def show_favourites():
     return render_template(
         'favourites.html', recipes=mongo.db.recipes.find())
 
-# Adds the email entered to my database
+# Deletes the recipe
 
+
+@app.route('/delete_recipe/<recipe_id>')
+def delete_recipe(recipe_id):
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    return redirect(url_for('recipes'))
+
+
+# Adds the email entered to my database
 
 @app.route('/sub', methods=['POST'])
 def sub():
@@ -136,4 +146,4 @@ def internal_server(error):
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), port=int(
         os.environ.get('PORT')),
-        debug=False)
+        debug=True)

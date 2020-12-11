@@ -314,7 +314,7 @@ a:hover {
   color: #51808b
 }
 
-.ftr-btn {
+.ftr-btn, .del-btn-margin {
   margin-top: 10px;
 }
 
