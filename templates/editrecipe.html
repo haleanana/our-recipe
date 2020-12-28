@@ -4,11 +4,11 @@
 <form method="POST" action="{{url_for('update_recipe', recipe_id = recipe._id)}}">
   <div class="container">
     <div class="form-group">
-      <label for="recipe">Recipe Name</label>
+      <label for="recipe_name">Recipe Name</label>
       <input value="{{recipe.recipe_name}}" type="text" class="form-control" id="recipe_name" name="recipe_name" required />
     </div>
     <div class="form-group">
-      <label for="exampleFormControlSelect1">Select Category</label>
+      <label for="category">Select Category</label>
       <select class="form-control" id="category" name="category_name">
         {% for category in categories %} {% if category.category_name ==
         recipe.category_name %}
