@@ -281,6 +281,8 @@ Due to the complexity of this feature, this bugs remains for now.
 6. **Edit/Update recipe text area blank spaces**
 - During edit/update, the text area for some recipes have empty white spaces. Issue might be fixed by making textarea code one line.
 This could also be caused by people editing and messing with the recipes. This issue is still under observation.
+7. **HTML validator erros**
+- Fixed all errors shown on HTML validator. You can see new results [here](https://imgur.com/H0evK2h)
 
 **Note: "Add recipe" button is designed to be overlapping the Jumbotron border on certain screen sizes and not on other screen sizes**
 
